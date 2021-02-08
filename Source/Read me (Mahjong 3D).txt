@@ -1,0 +1,10 @@
+Mahjong 3D z Eris Kallisti Dyskordia
+wersja 2021.02.07.
+
+MIT License
+
+Copyright (c) 2017 Jacek Mulawka
+
+j.mulawka@interia.pl
+
+https://github.com/jacek-mulawka

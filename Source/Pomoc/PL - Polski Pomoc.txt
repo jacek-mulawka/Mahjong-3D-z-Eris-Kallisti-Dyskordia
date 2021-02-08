@@ -1,0 +1,53 @@
+Ctrl + D - demo
+Ctrl + N - nowa gra
+Ctrl + P - podpowiedŸ
+Ctrl + T - przetasuj
+Ctrl + X - wyczyszczenie planszy
+Ctrl + W - wyjœcie
+Ctrl + A - prezentacja kostek
+Ctrl + Z - cofnij
+Ctrl + O - opcje
+
+Alt + Enter - pe³ny ekran / wyjdŸ z pe³nego ekranu
+Esc - wyjdŸ z pe³nego ekranu
+
+0 - wyœrodkuj kamerê
+9 - pocz¹tkowa pozycja kamery
+K, Spacja, PPM - poruszaj kamer¹ przy ruchu mysz¹
+Z - wyœwietl / ukryj panel przybli¿enia
+
+Del - resetuj kamerê
+Ctrl + Del - resetuj punkt, na który jest skierowana kamera
+
+Ctrl + 1 - wyœwietlanie czasu Brak
+Ctrl + 2 - wyœwietlanie czasu gry
+Ctrl + 3 - wyœwietlanie daty i godziny aktualnej
+
+Ctrl + + - zwiêksz kostki
+Ctrl + - - zmniejsz kostki
+Ctrl + Backspace - domyœlna wielkoœc kostek
+
+[ - zmniejsz gruboœæ kostek
+] - zwiêksz gruboœæ kostek
+
+;, Shift + ; - zmniejsz szybkoœæ ruchu kamery
+', Shift + ' - zwiêksz szybkoœæ ruchu kamery
+
+Ctrl + I - wyœwietlanie iloœci par do zdjêcia
+
+Ctrl + B - wyœwietlanie obrazka t³a planszy
+
+
+Ctrl + , - wyd³u¿ cykl zegara
+Ctrl + . - skróæ cykl zegara
+Ctrl + / - domyœlny cykl zegara
+
+
+Klawiatura numeryczna
+/ - kamera skierowana na punkt / prostopad³a do planszy
+
+Del - resetuj kamerê
+Ctrl + Del - resetuj punkt, na który jest skierowana kamera
+
+Cyfry numeryczne - zmiana perspektywy
+Ctrl + Cyfry numeryczne - ruch punktem, na który patrzy kamera
