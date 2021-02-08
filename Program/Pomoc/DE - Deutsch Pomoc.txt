@@ -1,0 +1,53 @@
+Strg + D - Demo
+Strg + N - Neues Spiel
+Strg + P - Hinweis
+Strg + T - Mischen
+Strg + X - Lösche das Board
+Strg + W - Beenden
+Strg + A - Darstellung der Würfel
+Strg + Z - Rückgängig machen
+Strg + O - Optionen
+
+Alt + Eingabetaste - Vollbild / Vollbild beenden
+Esc - Vollbild beenden
+
+0 - Kamera zentrieren
+9 - Anfängliche Kameraposition
+K, Space, RMB - Bewegen Sie die Kamera, während Sie die Maus bewegen
+Z - Zoombedienfeld ein- / ausblenden
+
+Entf - Kamera zurücksetzen 
+Strg + Entf - Setzt den Punkt zurück, auf den die Kamera zeigt
+
+Strg + 1 - Zeitanzeige Keine
+Strg + 2 - Zeigt die Spielzeit an
+Strg + 3 - Zeigt das aktuelle Datum und die aktuelle Uhrzeit an
+
+Strg + + - Würfel erhöhen
+Strg + - - Würfel schrumpfen
+Strg + Rücktaste - Die Standardgröße der Cubes
+
+[- Reduzieren Sie die Dicke der Würfel
+] - Erhöhen Sie die Dicke der Würfel
+
+;, Shift +; - Reduzieren Sie die Geschwindigkeit der Kamerabewegung
+', Shift +' - Erhöht die Bewegungsgeschwindigkeit der Kamera
+
+Strg + I - Zeigt die Anzahl der Paare zu entfernen an
+
+Strg + B - zeigt das Hintergrundbild der Karte an
+
+
+Strg +, - verlängert den Taktzyklus
+Strg +. - Verkürzen Sie den Taktzyklus
+Strg + / - Standardtaktzyklus
+
+
+Numerische Tastatur
+/ - Kamera auf den Punkt / senkrecht zur Tafel gerichtet
+
+Entf - Kamera zurücksetzen 
+Strg + Entf - Setzt den Punkt zurück, auf den die Kamera zeigt
+
+Numerische Zahlen - ein Perspektivwechsel
+Strg + Numerisch - Verschiebt den Punkt, auf den die Kamera schaut

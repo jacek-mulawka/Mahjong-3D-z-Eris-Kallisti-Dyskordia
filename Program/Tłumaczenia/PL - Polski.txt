@@ -1,0 +1,125 @@
+﻿Gra_MenuItem=Gra
+Gra__Demo_MenuItem=Demo
+Gra__Cofnij_MenuItem=Cofnij
+Gra__Nowa_Gra_MenuItem=Nowa gra
+Gra__Podpowiedź_MenuItem=Podpowiedź
+Gra__Przetasuj_MenuItem=Przetasuj
+Gra__Wyczyść_Planszę_MenuItem=Wyczyść planszę
+Gra__Wyjdź_MenuItem=Wyjdź
+Gra__Zaprezentuj_Kostki_MenuItem=Zaprezentuj kostki
+Układy_Kostek_MenuItem=Układy kostek
+Obrazki_Kostek_MenuItem=Obrazki kostek
+Opcje_MenuItem=Opcje
+Pomoc_MenuItem=Pomoc
+Kamera_Ruch_Ciągły_MenuItem=Ciągły ruch kamery
+Pełny_Ekran_MenuItem=Pełny ekran
+
+Opcje_TabSheet=Opcje
+Opcje_TabSheet=Podpowiedź=Opcje.
+Pomoc_TabSheet=Pomoc
+Pomoc_TabSheet=Podpowiedź=Pomoc.
+Tłumaczenia_TabSheet=Tłumaczenia
+O_Programie_TabSheet=O programie
+O_Programie_TabSheet=Podpowiedź=O programie.
+
+
+Zapisz_Ustawienia_Button=Zapisz ustawienia
+Opcje_Ukryj_Button=Podpowiedź=Ukryj opcje.
+
+
+Opcje_ScrollBox=Podpowiedź=Opcje.
+Wyświetlanie_Czasu_RadioGroup=Wyświetlanie czasu
+Wyświetlanie_Czasu_RadioGroup=Elementy=Brak;Czas gry; Czas;
+Wyświetlanie_Ilości_Par_Do_Zdjęcia_CheckBox=Wyświetlanie ilości par do zdjęcia
+Szerokość_Kostek_Etykieta_Label=Szerokość kostek
+Wysokość_Kostek_Etykieta_Label=Wysokość kostek
+Grubość_Kostek_Etykieta_Label=Grubość kostek
+Szybkość_Kamery_Etykieta_Label=Szybkość ruchu kamery
+Szybkość_Zegara_Etykieta_Label=Szybkość zegara
+Margines_Planszy_Etykieta_Label=Margines planszy
+Wartości_Domyślne_Button=Wartości domyślne
+Wczytaj_Ustawienia_Button=Wczytaj ustawienia
+Układ_Kostek_Nazwa_Wyczyść_Button=Nazwa układu kostek - wyczyść
+Kamera_Na_Środek_Układu_Kostek_CheckBox=Kamera spogląda na środek układu kostek
+Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatyczne wczytywanie układu kostek
+Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatyczne wczytywanie zapisanego układu kostek po uruchomieniu gry.
+Wczytuj_Konfigurację_Kostek_CheckBox=Wczytuj konfigurację kostek
+Kostki_Kwiatków_CheckBox=Kostki kwiatków
+Kostki_Kwiatków_CheckBox=Podpowiedź=Zamiast dwóch zestawów kostek pór roku użyj jednego zestawu kostek pór roku i jednego zestawu kostek kwiatków.
+Podpowiadaj_Tylko_Jeden_Ruch_CheckBox=Podpowiadaj tylko jeden ruch
+Pełny_Ekran_CheckBox=Pełny Ekran
+Przybliżenie_CheckBox=Panel przybliżenia
+Przybliżenie_CheckBox=Podpowiedź=Wyświetl panel przybliżenia.
+Obrazek_Tła_Planszy__Bok_Panel=
+Obrazek_Tła_Planszy__Bok_Panel=Podpowiedź=Wskaż część tła do zmodyfikowania.
+Obrazek_Tła_Planszy__Góra_RadioButton=Góra
+Obrazek_Tła_Planszy__Góra_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Lewo_RadioButton=Lewo
+Obrazek_Tła_Planszy__Lewo_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Przód_RadioButton=Przód
+Obrazek_Tła_Planszy__Przód_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Prawo_RadioButton=Prawo
+Obrazek_Tła_Planszy__Prawo_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Dół_RadioButton=Dół
+Obrazek_Tła_Planszy__Dół_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Tył_RadioButton=Tył
+Obrazek_Tła_Planszy__Tył_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Chmury_RadioButton=Chmury
+Obrazek_Tła_Planszy__Chmury_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Wszystkie_RadioButton=Wszystkie
+Obrazek_Tła_Planszy__Wszystkie_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Wybierz_Button=Wybierz obrazek tła planszy
+Obrazek_Tła_Planszy__Wybierz_Button=Podpowiedź=Wybierz obrazek tła planszy.
+Obrazek_Tła_Planszy__Wyświetl_CheckBox=Wyświetl obrazek tła planszy
+Obrazek_Tła_Planszy__Brak_Button=Brak obrazka tła planszy
+Kamera_Współrzędne_Etykieta_Label=Współrzędne kamery i jej celu
+
+
+Tłumaczenia_Panel=Podpowiedź=Tłumaczenia.
+Tłumaczenia_Odśwież_Button=Odśwież
+Tłumaczenia_Zastosuj_Button=Zastosuj
+Tłumaczenia_Domyślne_Button=Domyślne
+Tłumaczenia_Domyślne_Button=Podpowiedź=Ustaw domyślne__#13__tłumaczenie.
+
+Pomoc_Memo=Podpowiedź=Pomoc.
+
+Przybliżenie_Panel=^...v
+Przybliżenie_Panel=Podpowiedź=Przybliżenie.
+
+
+t__odśwież_listę_układów_kostek=Odśwież listę układów kostek
+t__odśwież_listę_obrazków_kostek=Odśwież listę obrazków kostek
+t__brak_obrazków_kostek=Brak
+t__domyślne_obrazki_kostek=Domyślne
+t__układ_kostek_nazwa=Nazwa układu kostek: 
+t__układ_kostek_nazwa__brak=<brak>
+
+t__błąd=Błąd
+t__gratulacje=Gratulacje
+t__komunikat=Komunikat
+t__potwierdzenie=Potwierdzenie
+
+t__nie_odnaleziono_pliku_układu_kostek=Nie odnaleziono pliku układu kostek: 
+t__nie_odnaleziono_pliku_tłumaczenia=Nie odnaleziono pliku tłumaczenia: 
+t__nie_odnaleziono_pliku_pomocy=Nie odnaleziono pliku pomocy: 
+t__nie_odnaleziono_katalogu_obrazków_kostek=Nie odnaleziono katalogu obrazków kostek: 
+
+t__koniec_gry=Koniec gry.
+t__nie_odnaleziono_kostek_do_ściągnięcia=Nie odnaleziono kostek do ściągnięcia.
+t__nie_odnaleziono_kostek_do_ściągnięcia_czy_przetasować=Nie odnaleziono kostek do ściągnięcia.__#13__Czy przetasować?
+
+t__brak_zdefiniowanych_układów_kostek=Brak zdefiniowanych układów kostek.
+t__brak_zdefiniowanych_obrazków_kostek=Brak zdefiniowanych obrazków kostek.
+t__rozpocząć_grę_od_nowa=Rozpocząć grę od nowa?
+t__wyczyścić_planszę=Wyczyścić planszę?
+t__zakończyć_działanie_programu=Zakończyć działanie programu?
+t__zapisać_ustawienia=Zapisać ustawienia?
+t__zaprezentować_kostki=Zaprezentować kostki?__#13__Zakończy to trwającą grę.
+
+t__przetasowania_ilość=Przetasowania 
+t__podpowiedzi_ilość=Podpowiedzi 
+t__cofnięcia_ilość=Cofnięcia 
+t__par_do_zdjęcia=Par do zdjęcia 
+
+t__ustawić_pusty_obrazek_tła_planszy=Ustawić pusty obrazek tła planszy?
+t__obrazek_tła_planszy_filtr=Obrazki|*.bmp; *.gif; *.jpg;*.jpeg; *.png; *.tif; *.tiff|Wszystkie pliki|*.*
