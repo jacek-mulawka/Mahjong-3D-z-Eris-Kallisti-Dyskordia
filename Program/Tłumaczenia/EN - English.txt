@@ -67,6 +67,8 @@ Obrazek_Tła_Planszy__Tył_RadioButton=Back
 Obrazek_Tła_Planszy__Tył_RadioButton=Podpowiedź=
 Obrazek_Tła_Planszy__Chmury_RadioButton=Clouds
 Obrazek_Tła_Planszy__Chmury_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Relative image paths
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Podpowiedź=Try to save the paths to the image files in relative form.
 Obrazek_Tła_Planszy__Wszystkie_RadioButton=All of them
 Obrazek_Tła_Planszy__Wszystkie_RadioButton=Podpowiedź=
 Obrazek_Tła_Planszy__Wybierz_Button=Select a background image for the board
@@ -118,7 +120,7 @@ t__zakończyć_działanie_programu=Exit the program?
 t__zapisać_ustawienia=Save the settings?
 t__zaprezentować_kostki=Showcase the cubes? This will end the game in progress.
 
-t__przetasowania_ilość=Shuffle 
+t__przetasowania_ilość=Shuffles 
 t__podpowiedzi_ilość=Hints 
 t__cofnięcia_ilość=Undo 
 t__par_do_zdjęcia=Pair to remove 
