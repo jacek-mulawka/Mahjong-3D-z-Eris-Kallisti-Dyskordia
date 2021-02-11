@@ -67,6 +67,8 @@ Obrazek_Tła_Planszy__Tył_RadioButton=Rückseite
 Obrazek_Tła_Planszy__Tył_RadioButton=Podpowiedź=
 Obrazek_Tła_Planszy__Chmury_RadioButton=Wolken
 Obrazek_Tła_Planszy__Chmury_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Relative Bildpfade
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Podpowiedź=Speichern die Pfade zu den Bilddateien in relativer Form.
 Obrazek_Tła_Planszy__Wszystkie_RadioButton=Alle von ihnen
 Obrazek_Tła_Planszy__Wszystkie_RadioButton=Podpowiedź=
 Obrazek_Tła_Planszy__Wybierz_Button=Hintergrundbild für die Karte
@@ -118,7 +120,7 @@ t__zakończyć_działanie_programu=Programm beenden?
 t__zapisać_ustawienia=Einstellungen speichern?
 t__zaprezentować_kostki=Würfel präsentieren?__#13__Dies beendet das laufende Spiel.
 
-t__przetasowania_ilość=Mischen 
+t__przetasowania_ilość=Mischungen 
 t__podpowiedzi_ilość=Hinweise 
 t__cofnięcia_ilość=Rücknahmen 
 t__par_do_zdjęcia=Ziehbaren Würfelpaaren 
