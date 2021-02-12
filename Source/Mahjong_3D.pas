@@ -3988,6 +3988,7 @@ begin
   b := ( Color shr 16 ) and $FF;
 
 end;//---//Funkcja Color_To_RGB().
+
 //---//      ***      Funkcje      ***      //---//
 
 
