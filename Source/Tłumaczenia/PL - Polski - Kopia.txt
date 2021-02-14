@@ -1,0 +1,136 @@
+﻿** Komentarz abc
+  ** Komentarz def 123
+Gra_MenuItem=Gra PL
+Gra__Demo_MenuItem=Demo PL
+Gra__Cofnij_MenuItem=Cofnij PL
+Gra__Nowa_Gra_MenuItem=Nowa gra PL
+Gra__Podpowiedź_MenuItem=Podpowiedź PL
+Gra__Przetasuj_MenuItem=Przetasuj PL
+Gra__Wyczyść_Planszę_MenuItem=Wyczyść planszę PL
+Gra__Wyjdź_MenuItem=Wyjdź PL
+Gra__Zaprezentuj_Kostki_MenuItem=Zaprezentuj kostki PL
+Układy_Kostek_MenuItem=Układy kostek PL
+Obrazki_Kostek_MenuItem=Obrazki kostek PL
+Opcje_MenuItem=Opcje PL
+Pomoc_MenuItem=Pomoc PL
+Kamera_Ruch_Ciągły_MenuItem=Ciągły ruch kamery PL
+Pełny_Ekran_MenuItem=Pełny ekran PL
+
+Opcje_TabSheet=Opcje PL
+Opcje_TabSheet=Podpowiedź=Opcje. PL
+Pomoc_TabSheet=Pomoc PL
+Pomoc_TabSheet=Podpowiedź=Pomoc. PL
+Tłumaczenia_TabSheet=Tłumaczenia PL
+O_Programie_TabSheet=O programie PL
+O_Programie_TabSheet=Podpowiedź=O programie. PL
+
+
+Zapisz_Ustawienia_Button=Zapisz ustawienia PL
+Opcje_Ukryj_Button=Podpowiedź=Ukryj opcje. PL
+
+
+Opcje_ScrollBox=Podpowiedź=Opcje scrollBox. PL
+Wyświetlanie_Czasu_RadioGroup=Wyświetlanie czasu PL
+Wyświetlanie_Czasu_RadioGroup=Elementy=Brak PL;Czas gry PL; Czas PL;
+Wyświetlanie_Ilości_Par_Do_Zdjęcia_CheckBox=Wyświetlanie ilości par do zdjęcia PL
+Szerokość_Kostek_Etykieta_Label=Szerokość kostek PL
+Wysokość_Kostek_Etykieta_Label=Wysokość kostek PL
+Grubość_Kostek_Etykieta_Label=Grubość kostek PL
+Szybkość_Kamery_Etykieta_Label= Szybkość ruchu kamery PL
+Szybkość_Zegara_Etykieta_Label=Szybkość zegara PL
+Margines_Planszy_Etykieta_Label=Margines planszy PL
+Wartości_Domyślne_Button=Wartości domyślne PL
+Wczytaj_Ustawienia_Button=Wczytaj ustawienia PL
+**Układ_Kostek_Nazwa_Label=Nazwa układu kostek: <?>. PL
+Układ_Kostek_Nazwa_Wyczyść_Button=Nazwa układu kostek - wyczyść PL
+Kamera_Na_Środek_Układu_Kostek_CheckBox=Kamera spogląda na środek układu kostek PL
+Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatyczne wczytywanie układu kostek PL
+Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatyczne wczytywanie zapisanego układu kostek po uruchomieniu gry. PL
+Wczytuj_Konfigurację_Kostek_CheckBox=Wczytuj konfigurację układu kostek PL
+Wczytuj_Konfigurację_Kostek_CheckBox=Podpowiedź=Podczas ładowania układu kostek ustawiaj parametry kostek z pliku konfiguracyjnego układu kostek (jeżeli dostępne). PL
+Kostki_Kwiatków_CheckBox=Kostki kwiatków PL
+Kostki_Kwiatków_CheckBox=Podpowiedź=Zamiast dwóch zestawów kostek pór roku użyj jednego zestawu kostek pór roku i jednego zestawu kostek kwiatków. PL
+Podpowiadaj_Tylko_Jeden_Ruch_CheckBox=Podpowiadaj tylko jeden ruch PL
+Pełny_Ekran_CheckBox=Pełny Ekran PL
+Przybliżenie_CheckBox=Panel przybliżenia PL
+Przybliżenie_CheckBox=Podpowiedź=Wyświetl panel przybliżenia. PL
+Obrazek_Tła_Planszy__Bok_Panel=
+Obrazek_Tła_Planszy__Bok_Panel=Podpowiedź=Wskaż część tła do zmodyfikowania. PL
+Obrazek_Tła_Planszy__Góra_RadioButton=Góra PL
+Obrazek_Tła_Planszy__Góra_RadioButton=Podpowiedź=Góra. PL
+Obrazek_Tła_Planszy__Lewo_RadioButton=Lewo PL
+Obrazek_Tła_Planszy__Lewo_RadioButton=Podpowiedź=Lewo. PL
+Obrazek_Tła_Planszy__Przód_RadioButton=Przód PL
+Obrazek_Tła_Planszy__Przód_RadioButton=Podpowiedź=Przód. PL
+Obrazek_Tła_Planszy__Prawo_RadioButton=Prawo PL
+Obrazek_Tła_Planszy__Prawo_RadioButton=Podpowiedź=Prawo. PL
+Obrazek_Tła_Planszy__Dół_RadioButton=Dół PL
+Obrazek_Tła_Planszy__Dół_RadioButton=Podpowiedź=Dół. PL
+Obrazek_Tła_Planszy__Tył_RadioButton=Tył PL
+Obrazek_Tła_Planszy__Tył_RadioButton=Podpowiedź=Tył. PL
+Obrazek_Tła_Planszy__Chmury_RadioButton=Chmury PL
+Obrazek_Tła_Planszy__Chmury_RadioButton=Podpowiedź=Chmury. PL
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Względne ścieżki obrazków PL
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Podpowiedź=Próbuj zapisać ścieżki do plików obrazków w postaci względnej. PL
+Obrazek_Tła_Planszy__Wszystkie_RadioButton=Wszystkie PL
+Obrazek_Tła_Planszy__Wszystkie_RadioButton=Podpowiedź=Wszystkie. PL
+Obrazek_Tła_Planszy__Wybierz_Button=Wybierz obrazek tła planszy PL
+Obrazek_Tła_Planszy__Wyświetl_CheckBox=Wyświetl obrazek tła planszy PL
+Obrazek_Tła_Planszy__Brak_Button=Brak obrazka tła planszy PL
+Kamera_Współrzędne_Etykieta_Label=Współrzędne kamery i jej celu PL
+
+
+**Układy_Kostek__Odśwież_Listę_MenuItem=Odśwież listę układów kostek PL
+Tłumaczenia_Panel=Tłumaczenia panel xxx
+
+Tłumaczenia_Panel=Podpowiedź=Tłumaczenia panel. PL
+Tłumaczenia_Odśwież_Button=Odśwież PL
+Tłumaczenia_Zastosuj_Button=Zastosuj PL
+Tłumaczenia_Domyślne_Button=Domyślne PL
+Tłumaczenia_Domyślne_Button=Podpowiedź=Ustaw domyślne__#13__tłumaczenie. PL
+
+Pomoc_Memo=Podpowiedź=Pomoc memo. PL
+
+Przybliżenie_Panel=^...v PL
+Przybliżenie_Panel=Podpowiedź=Przybliżenie PL
+
+Obrazki_Kostek__Domyślne_MenuItem=Podpowiedź=aaa
+Obrazki_Kostek__Brak_MenuItem=Podpowiedź=bbb
+
+
+t__odśwież_listę_układów_kostek=Odśwież listę układów kostek PL
+t__odśwież_listę_obrazków_kostek=Odśwież listę obrazków kostek PL
+t__brak_obrazków_kostek=Brak PL
+t__domyślne_obrazki_kostek=Domyślne PL
+t__układ_kostek_nazwa=Nazwa układu kostek: PL 
+t__układ_kostek_nazwa__brak=<brak> PL
+
+t__błąd=Błąd PL
+t__gratulacje=Gratulacje PL
+t__komunikat=Komunikat PL
+t__potwierdzenie=Potwierdzenie PL
+
+t__nie_odnaleziono_pliku_układu_kostek=Nie odnaleziono pliku układu kostek: PL 
+t__nie_odnaleziono_pliku_tłumaczenia=Nie odnaleziono pliku tłumaczenia: PL 
+t__nie_odnaleziono_pliku_pomocy=Nie odnaleziono pliku pomocy: PL 
+t__nie_odnaleziono_katalogu_obrazków_kostek=Nie odnaleziono katalogu obrazków kostek: PL 
+
+t__koniec_gry=Koniec gry. PL
+t__nie_odnaleziono_kostek_do_ściągnięcia=Nie odnaleziono kostek do ściągnięcia. PL
+t__nie_odnaleziono_kostek_do_ściągnięcia_czy_przetasować=Nie odnaleziono kostek do ściągnięcia.__#13__Czy przetasować? PL
+
+t__brak_zdefiniowanych_układów_kostek=Brak zdefiniowanych układów kostek. PL
+t__brak_zdefiniowanych_obrazków_kostek=Brak zdefiniowanych obrazków kostek. PL
+t__rozpocząć_grę_od_nowa=Rozpocząć grę od nowa? PL
+t__wyczyścić_planszę=Wyczyścić planszę? PL
+t__zakończyć_działanie_programu=Zakończyć działanie programu? PL
+t__zapisać_ustawienia=Zapisać ustawienia? PL
+t__zaprezentować_kostki=Zaprezentować kostki? PL__#13__Zakończy to trwającą grę. PL
+
+t__przetasowania_ilość=Przetasowania PL 
+t__podpowiedzi_ilość=Podpowiedzi PL 
+t__cofnięcia_ilość=Cofnięcia PL 
+t__par_do_zdjęcia=Par do zdjęcia PL 
+
+t__ustawić_pusty_obrazek_tła_planszy=Ustawić pusty obrazek tła planszy? PL
+t__obrazek_tła_planszy_filtr=Obrazki PL|*.bmp; *.gif; *.jpg;*.jpeg; *.png; *.tif; *.tiff|Wszystkie pliki PL|*.*
