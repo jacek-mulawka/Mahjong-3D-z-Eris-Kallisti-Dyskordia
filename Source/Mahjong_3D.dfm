@@ -51,7 +51,7 @@
       Top = 51
       Width = 248
       Height = 671
-      ActivePage = O_Programie_TabSheet
+      ActivePage = Opcje_TabSheet
       Align = alClient
       TabHeight = 45
       TabOrder = 0
@@ -59,16 +59,12 @@
         Caption = 'Opcje'
         ParentShowHint = False
         ShowHint = True
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Opcje_ScrollBox: TScrollBox
           Left = 0
           Top = 0
           Width = 240
           Height = 616
-          VertScrollBar.Position = 951
+          VertScrollBar.Position = 494
           Align = alClient
           TabOrder = 0
           TabStop = True
@@ -76,7 +72,7 @@
           OnMouseWheel = ScrollBoxMouseWheel
           object Szybkość_Zegara_Etykieta_Label: TLabel
             Left = 10
-            Top = -546
+            Top = -89
             Width = 104
             Height = 13
             Caption = 'Szybko'#347#263' zegara [ms]'
@@ -85,7 +81,7 @@
           end
           object Margines_Planszy_Etykieta_Label: TLabel
             Left = 10
-            Top = -491
+            Top = -34
             Width = 82
             Height = 13
             Caption = 'Margines planszy'
@@ -94,7 +90,7 @@
           end
           object Szerokość_Kostek_Etykieta_Label: TLabel
             Left = 10
-            Top = -771
+            Top = -314
             Width = 82
             Height = 13
             Caption = 'Szeroko'#347#263' kostek'
@@ -103,14 +99,14 @@
           end
           object Układ_Kostek_Nazwa_Label: TLabel
             Left = 17
-            Top = -316
+            Top = 141
             Width = 133
             Height = 13
             Caption = 'Nazwa uk'#322'adu kostek: <?>.'
           end
           object Wysokość_Kostek_Etykieta_Label: TLabel
             Left = 10
-            Top = -716
+            Top = -259
             Width = 82
             Height = 13
             Caption = 'Wysoko'#347#263' kostek'
@@ -119,14 +115,14 @@
           end
           object Kamera_Współrzędne_Etykieta_Label: TLabel
             Left = 10
-            Top = 549
+            Top = 1006
             Width = 143
             Height = 13
             Caption = 'Wsp'#243#322'rz'#281'dne kamery i jej celu'
           end
           object Grubość_Kostek_Etykieta_Label: TLabel
             Left = 10
-            Top = -656
+            Top = -199
             Width = 73
             Height = 13
             Caption = 'Grubo'#347#263' kostek'
@@ -135,7 +131,7 @@
           end
           object Kamera_Współrzędne_Label: TLabel
             Left = 10
-            Top = 566
+            Top = 1023
             Width = 64
             Height = 39
             Caption = 'x: <?>   <?>'#13#10'y: <?>   <?>'#13#10'z: <?>   <?>'
@@ -144,7 +140,7 @@
           end
           object Szybkość_Kamery_Etykieta_Label: TLabel
             Left = 10
-            Top = -601
+            Top = -144
             Width = 112
             Height = 13
             Caption = 'Szybko'#347#263' ruchu kamery'
@@ -153,7 +149,7 @@
           end
           object Szybkość_Zegara_SpinEdit: TSpinEdit
             Left = 10
-            Top = -526
+            Top = -69
             Width = 121
             Height = 22
             MaxValue = 999999999
@@ -166,7 +162,7 @@
           end
           object Wysokość_Kostek_SpinEdit: TSpinEdit
             Left = 10
-            Top = -696
+            Top = -239
             Width = 121
             Height = 22
             MaxValue = 999999999
@@ -174,12 +170,12 @@
             ParentShowHint = False
             ShowHint = True
             TabOrder = 3
-            Value = 70
+            Value = 2
             OnChange = Kostki_SpinEditChange
           end
           object Szerokość_Kostek_SpinEdit: TSpinEdit
             Left = 10
-            Top = -751
+            Top = -294
             Width = 121
             Height = 22
             MaxValue = 999999999
@@ -187,12 +183,12 @@
             ParentShowHint = False
             ShowHint = True
             TabOrder = 2
-            Value = 50
+            Value = 1
             OnChange = Kostki_SpinEditChange
           end
           object Margines_Planszy_SpinEdit: TSpinEdit
             Left = 10
-            Top = -471
+            Top = -14
             Width = 121
             Height = 22
             MaxValue = 999999999
@@ -200,12 +196,12 @@
             ParentShowHint = False
             ShowHint = True
             TabOrder = 7
-            Value = 50
+            Value = 0
             OnChange = Kostki_SpinEditChange
           end
           object Układ_Kostek_Nazwa_Wyczyść_Button: TButton
             Left = 11
-            Top = -291
+            Top = 166
             Width = 175
             Height = 25
             Caption = 'Nazwa uk'#322'adu kostek - wyczy'#347#263
@@ -216,7 +212,7 @@
           end
           object Wartości_Domyślne_Button: TButton
             Left = 11
-            Top = -416
+            Top = 41
             Width = 175
             Height = 25
             Caption = 'Warto'#347'ci domy'#347'lne'
@@ -227,7 +223,7 @@
           end
           object Wyświetlanie_Czasu_RadioGroup: TRadioGroup
             Left = 10
-            Top = -941
+            Top = -484
             Width = 185
             Height = 105
             Caption = 'Wy'#347'wietlanie czasu'
@@ -243,7 +239,7 @@
           end
           object Wczytaj_Ustawienia_Button: TButton
             Left = 11
-            Top = -365
+            Top = 92
             Width = 175
             Height = 25
             Caption = 'Wczytaj ustawienia'
@@ -254,40 +250,49 @@
           end
           object Wyświetlanie_Ilości_Par_Do_Zdjęcia_CheckBox: TCheckBox
             Left = 10
-            Top = -816
+            Top = -359
             Width = 300
             Height = 17
             Caption = 'Wy'#347'wietlanie ilo'#347'ci par do zdj'#281'cia'
+            Checked = True
             ParentShowHint = False
             ShowHint = True
+            State = cbChecked
             TabOrder = 1
           end
           object Automatyczne_Wczytywanie_Układu_Kostek_CheckBox: TCheckBox
             Left = 5
-            Top = -191
+            Top = 266
             Width = 300
             Height = 17
             Hint = 
               'Automatyczne wczytywanie zapisanego uk'#322'adu kostek po uruchomieni' +
               'u gry.'
             Caption = 'Automatyczne wczytywanie uk'#322'adu kostek'
+            Checked = True
             ParentShowHint = False
             ShowHint = True
+            State = cbChecked
             TabOrder = 12
           end
           object Wczytuj_Konfigurację_Kostek_CheckBox: TCheckBox
             Left = 5
-            Top = -146
+            Top = 311
             Width = 300
             Height = 17
-            Caption = 'Wczytuj konfiguracj'#281' obrazk'#243'w'
+            Hint = 
+              'Podczas '#322'adowania uk'#322'adu kostek ustawiaj parametry kostek z plik' +
+              'u konfiguracyjnego uk'#322'adu kostek (je'#380'eli dost'#281'pne).'
+            Caption = 'Wczytuj konfiguracj'#281' uk'#322'adu kostek'
+            Checked = True
             ParentShowHint = False
             ShowHint = True
+            State = cbChecked
             TabOrder = 13
           end
           object Kostki_Kwiatków_CheckBox: TCheckBox
             Left = 5
-            Top = -106
+            Top = 351
             Width = 300
             Height = 17
             Hint = 
@@ -302,7 +307,7 @@
           end
           object Obrazek_Tła_Planszy__Wybierz_Button: TButton
             Left = 10
-            Top = 389
+            Top = 846
             Width = 175
             Height = 25
             Caption = 'Wybierz obrazek t'#322'a planszy'
@@ -313,7 +318,7 @@
           end
           object Obrazek_Tła_Planszy__Brak_Button: TButton
             Left = 10
-            Top = 494
+            Top = 951
             Width = 175
             Height = 25
             Caption = 'Brak obrazka t'#322'a planszy'
@@ -324,7 +329,7 @@
           end
           object Obrazek_Tła_Planszy__Wyświetl_CheckBox: TCheckBox
             Left = 5
-            Top = 449
+            Top = 906
             Width = 300
             Height = 17
             Caption = 'Wy'#347'wietl obrazek t'#322'a planszy'
@@ -337,7 +342,7 @@
           end
           object Podpowiadaj_Tylko_Jeden_Ruch_CheckBox: TCheckBox
             Left = 5
-            Top = -66
+            Top = 391
             Width = 200
             Height = 17
             Caption = 'Podpowiadaj tylko jeden ruch'
@@ -347,20 +352,18 @@
           end
           object Pełny_Ekran_CheckBox: TCheckBox
             Left = 5
-            Top = -21
+            Top = 436
             Width = 200
             Height = 17
             Caption = 'Pe'#322'ny ekran'
-            Checked = True
             ParentShowHint = False
             ShowHint = True
-            State = cbChecked
             TabOrder = 16
             OnClick = Pełny_Ekran_CheckBoxClick
           end
           object Grubość_Kostek_SpinEdit: TSpinEdit
             Left = 10
-            Top = -636
+            Top = -179
             Width = 121
             Height = 22
             MaxValue = 999999999
@@ -368,23 +371,25 @@
             ParentShowHint = False
             ShowHint = True
             TabOrder = 4
-            Value = 1
+            Value = 7
             OnChange = Kostki_SpinEditChange
           end
           object Kamera_Na_Środek_Układu_Kostek_CheckBox: TCheckBox
             Left = 5
-            Top = -231
+            Top = 226
             Width = 300
             Height = 17
             Caption = 'Kamera spogl'#261'da na '#347'rodek uk'#322'adu kostek'
+            Checked = True
             ParentShowHint = False
             ShowHint = True
+            State = cbChecked
             TabOrder = 11
             OnClick = Kostki_SpinEditChange
           end
           object Szybkość_Kamery_SpinEdit: TSpinEdit
             Left = 10
-            Top = -581
+            Top = -124
             Width = 121
             Height = 22
             MaxValue = 999999999
@@ -397,7 +402,7 @@
           end
           object Przybliżenie_CheckBox: TCheckBox
             Left = 5
-            Top = 27
+            Top = 484
             Width = 200
             Height = 17
             Hint = 'Wy'#347'wietl panel przybli'#380'enia.'
@@ -409,7 +414,7 @@
           end
           object Obrazek_Tła_Planszy__Bok_Panel: TPanel
             Left = 10
-            Top = 74
+            Top = 531
             Width = 225
             Height = 215
             Hint = 'Wska'#380' cz'#281#347#263' t'#322'a do zmodyfikowania.'
@@ -483,7 +488,7 @@
           end
           object Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox: TCheckBox
             Left = 5
-            Top = 329
+            Top = 786
             Width = 200
             Height = 17
             Hint = 'Pr'#243'buj zapisa'#263' '#347'cie'#380'ki do plik'#243'w obrazk'#243'w w postaci wzgl'#281'dnej.'
@@ -582,14 +587,18 @@
         ImageIndex = 3
         ParentShowHint = False
         ShowHint = True
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object O_Programie_Label: TLabel
           Left = 0
           Top = 0
-          Width = 240
+          Width = 237
           Height = 260
           Align = alTop
           Caption = 
-            'Mahjong 3D z Eris Kallisti Dyskordia'#13#10'wersja 2021.02.07.'#13#10#13#10'MIT ' +
+            'Mahjong 3D z Eris Kallisti Dyskordia'#13#10'wersja 2021.02.14.'#13#10#13#10'MIT ' +
             'License'#13#10#13#10'Copyright (c) 2017 Jacek Mulawka'#13#10#13#10'j.mulawka@interia' +
             '.pl'#13#10#13#10'https://github.com/jacek-mulawka'#13#10#13#10#13#10#13#10'Program jest darm' +
             'owy, udost'#281'pniony w postaci takiej jakiej jest wraz ze wszystkim' +
@@ -598,7 +607,6 @@
             ' szkody (w'#322'asne i niew'#322'asne) materialne i niematerialne oraz utr' +
             'at'#281' danych w zwi'#261'zku z u'#380'ywaniem programu.'
           WordWrap = True
-          ExplicitWidth = 237
         end
       end
     end

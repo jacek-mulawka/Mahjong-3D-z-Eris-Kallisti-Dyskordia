@@ -4312,7 +4312,7 @@ begin
     begin
 
       Kamera_Ruch_Ci¹g³y_MenuItem.Checked := not Kamera_Ruch_Ci¹g³y_MenuItem.Checked;
-      Kamera_Ruch_Ci¹g³y_MenuItemClick( Sender );
+      Kamera_Ruch_Ci¹g³y_MenuItemClick( T³umaczenia_Panel ); // Aby nie zaznacza³ kostki podczas obs³ugiwania innych klawiszy.
 
     end;
   //---//if Key in [ 32, 75 ] then
@@ -4814,7 +4814,7 @@ begin
       //ztw := 32; // Spacja.
       //PlanszaKeyDown( Sender, ztw, Shift );
       Kamera_Ruch_Ci¹g³y_MenuItem.Checked := not Kamera_Ruch_Ci¹g³y_MenuItem.Checked;
-      Kamera_Ruch_Ci¹g³y_MenuItemClick( T³umaczenia_Panel );
+      Kamera_Ruch_Ci¹g³y_MenuItemClick( T³umaczenia_Panel ); // Aby nie zaznacza³ kostki podczas obs³ugiwania innych klawiszy.
       Exit;
 
     end;
@@ -4830,7 +4830,7 @@ begin
 
 
   if    ( Sender <> nil )
-    and ( TComponent(Sender).Name = T³umaczenia_Panel.Name ) then
+    and ( TComponent(Sender).Name = T³umaczenia_Panel.Name ) then // Aby nie zaznacza³ kostki podczas obs³ugiwania innych klawiszy.
     Exit;
 
 
@@ -5701,19 +5701,19 @@ begin
   blokuj_rysowanie_kostek := true;
 
   Wyœwietlanie_Czasu_RadioGroup.ItemIndex := 0;
-  Wyœwietlanie_Iloœci_Par_Do_Zdjêcia_CheckBox.Checked := false;
+  Wyœwietlanie_Iloœci_Par_Do_Zdjêcia_CheckBox.Checked := true;
 
   Margines_Planszy_SpinEdit.Value := 0;
-  Szerokoœæ_Kostek_SpinEdit.Value := 5;
-  Wysokoœæ_Kostek_SpinEdit.Value := 7;
-  Gruboœæ_Kostek_SpinEdit.Value := 20;
+  Szerokoœæ_Kostek_SpinEdit.Value := 1;
+  Wysokoœæ_Kostek_SpinEdit.Value := 2;
+  Gruboœæ_Kostek_SpinEdit.Value := 7;
 
   Szybkoœæ_Zegara_SpinEdit.Value := 1000;
 
   Szybkoœæ_Kamery_SpinEdit.Value := 10;
 
   Kamera_Na_Œrodek_Uk³adu_Kostek_CheckBox.Checked := true;
-  Automatyczne_Wczytywanie_Uk³adu_Kostek_CheckBox.Checked := false;
+  Automatyczne_Wczytywanie_Uk³adu_Kostek_CheckBox.Checked := true;
   //Wczytuj_Konfiguracjê_Kostek_CheckBox.Checked := true;
   Kostki_Kwiatków_CheckBox.Checked := true;
   Podpowiadaj_Tylko_Jeden_Ruch_CheckBox.Checked := false;
