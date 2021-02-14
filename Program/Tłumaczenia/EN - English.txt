@@ -44,7 +44,8 @@ Układ_Kostek_Nazwa_Wyczyść_Button=Podpowiedź=The name of the cube layout - c
 Kamera_Na_Środek_Układu_Kostek_CheckBox=The camera looks at the center of the ankle system
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatic loading of the cube layout
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatic loading of a saved cube pattern after starting the game.
-Wczytuj_Konfigurację_Kostek_CheckBox=Load cube configuration
+Wczytuj_Konfigurację_Kostek_CheckBox=Load cubes configuration
+Wczytuj_Konfigurację_Kostek_CheckBox=Podpowiedź=When loading cubes layout, set the cube parameters from the cube layout configuration file (if available).
 Kostki_Kwiatków_CheckBox=Flower cubes
 Kostki_Kwiatków_CheckBox=Podpowiedź=Instead of two sets of Season cubes, use one set of Season cubes and one set of Flower cubes.
 Podpowiadaj_Tylko_Jeden_Ruch_CheckBox=Prompt only one move

@@ -45,6 +45,7 @@ Kamera_Na_Środek_Układu_Kostek_CheckBox=Die Kamera schaut in die Mitte des Kn�
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatisches Laden des Cube-Layouts
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatisches Laden eines gespeicherten Würfelmusters zu Beginn des Spiels.
 Wczytuj_Konfigurację_Kostek_CheckBox=Würfelkonfiguration laden
+Wczytuj_Konfigurację_Kostek_CheckBox=Podpowiedź=Legen Sie beim Laden der Würfelkonfiguration die Cube-Parameter in der Konfigurationsdatei des Cube-Layouts fest (falls verfügbar).
 Kostki_Kwiatków_CheckBox=Blumenwürfel
 Kostki_Kwiatków_CheckBox=Podpowiedź=Verwenden Sie anstelle von zwei Sätzen Saisonwürfel einen Satz Saisonwürfel und einen Satz Blumenwürfel.
 Podpowiadaj_Tylko_Jeden_Ruch_CheckBox=Hinweisen nur eine Bewegung

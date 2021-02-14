@@ -43,7 +43,8 @@ Układ_Kostek_Nazwa_Wyczyść_Button=Nazwa układu kostek - wyczyść
 Kamera_Na_Środek_Układu_Kostek_CheckBox=Kamera spogląda na środek układu kostek
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatyczne wczytywanie układu kostek
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatyczne wczytywanie zapisanego układu kostek po uruchomieniu gry.
-Wczytuj_Konfigurację_Kostek_CheckBox=Wczytuj konfigurację kostek
+Wczytuj_Konfigurację_Kostek_CheckBox=Wczytuj konfigurację układu kostek
+Wczytuj_Konfigurację_Kostek_CheckBox=Podpowiedź=Podczas ładowania układu kostek ustawiaj parametry kostek z pliku konfiguracyjnego układu kostek (jeżeli dostępne).
 Kostki_Kwiatków_CheckBox=Kostki kwiatków
 Kostki_Kwiatków_CheckBox=Podpowiedź=Zamiast dwóch zestawów kostek pór roku użyj jednego zestawu kostek pór roku i jednego zestawu kostek kwiatków.
 Podpowiadaj_Tylko_Jeden_Ruch_CheckBox=Podpowiadaj tylko jeden ruch
