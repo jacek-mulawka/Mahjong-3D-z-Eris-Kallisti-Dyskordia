@@ -23,4 +23,6 @@ Powered by
 
 [GLScene](http://glscene.sourceforge.net),
 
-[Delphi](https://www.embarcadero.com/products/delphi).
+[Delphi](https://www.embarcadero.com/products/delphi),
+
+[POV-Ray](http://www.povray.org).
