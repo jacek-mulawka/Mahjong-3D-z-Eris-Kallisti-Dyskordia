@@ -47,3 +47,9 @@ Powered by
 [Delphi](https://www.embarcadero.com/products/delphi),
 
 [POV-Ray](http://www.povray.org).
+
+
+## Tag
+darmowa gra PC Windows darmowy mahjong
+
+free game PC Windows free mahjong
