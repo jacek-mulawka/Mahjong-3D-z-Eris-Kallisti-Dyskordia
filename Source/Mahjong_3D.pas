@@ -190,6 +190,7 @@ type
     Przybli¿enie_Splitter: TSplitter;
     T³o_GLSkyBox: TGLSkyBox;
     GLMaterialLibrary1: TGLMaterialLibrary;
+    Logo_Image: TImage;
     procedure FormShow( Sender: TObject );
     procedure FormClose( Sender: TObject; var Action: TCloseAction );
     procedure Zapisz_Ustawienia( Sender : TObject );

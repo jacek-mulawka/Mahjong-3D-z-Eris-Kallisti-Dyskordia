@@ -37,7 +37,7 @@
     <PropertyGroup Condition="'$(Base)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1045</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=Jacek Mulawka;FileDescription=Mahjong jednoosobowy 3D z Eris Kallisti Dyskordia. MIT License.;FileVersion=1.0.0.0;InternalName=;LegalCopyright=Copyright (c) 2017 Jacek Mulawka;LegalTrademarks=;OriginalFilename=Mahjong 3D z Eris Kallisti Dyskordia;ProductName=Mahjong 3D z Eris Kallisti Dyskordia;ProductVersion=2021.2.7;Comments=j.mulawka@interia.pl;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Jacek Mulawka;FileDescription=Mahjong jednoosobowy 3D z Eris Kallisti Dyskordia. MIT License.;FileVersion=1.0.0.0;InternalName=;LegalCopyright=Copyright (c) 2017 Jacek Mulawka;LegalTrademarks=;OriginalFilename=Mahjong 3D z Eris Kallisti Dyskordia;ProductName=Mahjong 3D z Eris Kallisti Dyskordia;ProductVersion=2021.5.3;Comments=j.mulawka@interia.pl https://github.com/jacek-mulawka;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <SanitizedProjectName>Mahjong_3D_pr</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -56,7 +56,7 @@
         <DCC_Optimize>false</DCC_Optimize>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <VerInfo_Keys>CompanyName=Jacek Mulawka;FileDescription=Mahjong jednoosobowy 3D z Eris Kallisti Dyskordia.;FileVersion=1.0.0.0;InternalName=;LegalCopyright=Copyright (c) 2017 Jacek Mulawka;LegalTrademarks=;OriginalFilename=Mahjong 3D z Eris Kallisti Dyskordia;ProductName=Mahjong 3D z Eris Kallisti Dyskordia;ProductVersion=2021.2.6;Comments=j.mulawka@interia.pl;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Jacek Mulawka;FileDescription=Mahjong jednoosobowy 3D z Eris Kallisti Dyskordia.;FileVersion=1.0.0.0;InternalName=;LegalCopyright=Copyright (c) 2017 Jacek Mulawka;LegalTrademarks=;OriginalFilename=Mahjong 3D z Eris Kallisti Dyskordia;ProductName=Mahjong 3D z Eris Kallisti Dyskordia;ProductVersion=2021.5.3;Comments=j.mulawka@interia.pl https://github.com/jacek-mulawka;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">

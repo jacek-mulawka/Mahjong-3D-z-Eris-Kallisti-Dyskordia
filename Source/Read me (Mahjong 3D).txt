@@ -1,5 +1,5 @@
 Mahjong 3D z Eris Kallisti Dyskordia
-wersja 2021.02.14.
+wersja 2021.05.03.
 
 MIT License
 

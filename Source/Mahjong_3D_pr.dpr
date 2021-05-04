@@ -13,7 +13,8 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.HintHidePause := 30000;
+
   Application.CreateForm( TMahjong_3D_Form, Mahjong_3D_Form );
-  Application.Run;
+  Application.Run();
 
 end.
