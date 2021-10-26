@@ -31,9 +31,9 @@ Opcje_ScrollBox=Podpowiedź=Options.
 Wyświetlanie_Czasu_RadioGroup=Time display
 Wyświetlanie_Czasu_RadioGroup=Elementy=None; Game time; Time;
 Wyświetlanie_Ilości_Par_Do_Zdjęcia_CheckBox=Display of the number of pairs to be removed
-Szerokość_Kostek_Etykieta_Label=The width of the ankles
-Wysokość_Kostek_Etykieta_Label=Ankle height
-Grubość_Kostek_Etykieta_Label=The thickness of the ankles
+Szerokość_Kostek_Etykieta_Label=Tiles width
+Wysokość_Kostek_Etykieta_Label=Tiles height
+Grubość_Kostek_Etykieta_Label=Tiles thickness
 Szybkość_Kamery_Etykieta_Label=Camera movement speed
 Szybkość_Zegara_Etykieta_Label=Clock speed
 Margines_Planszy_Etykieta_Label=Board margin
@@ -41,7 +41,7 @@ Wartości_Domyślne_Button=Default values
 Wczytaj_Ustawienia_Button=Load settings
 Układ_Kostek_Nazwa_Wyczyść_Button=The name of the cube layout - clear
 Układ_Kostek_Nazwa_Wyczyść_Button=Podpowiedź=The name of the cube layout - clear.
-Kamera_Na_Środek_Układu_Kostek_CheckBox=The camera looks at the center of the ankle system
+Kamera_Na_Środek_Układu_Kostek_CheckBox=The camera looks at the center of the tiles set
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatic loading of the cube layout
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatic loading of a saved cube pattern after starting the game.
 Wczytuj_Konfigurację_Kostek_CheckBox=Load cubes configuration
@@ -110,8 +110,8 @@ t__nie_odnaleziono_pliku_pomocy=Help file not found:
 t__nie_odnaleziono_katalogu_obrazków_kostek=Cube pictures directory not found: 
 
 t__koniec_gry=End of the game.
-t__nie_odnaleziono_kostek_do_ściągnięcia=No pullable ankles found.
-t__nie_odnaleziono_kostek_do_ściągnięcia_czy_przetasować=No pullable ankles found.__#13__Shuffle?
+t__nie_odnaleziono_kostek_do_ściągnięcia=No pullable tiles found.
+t__nie_odnaleziono_kostek_do_ściągnięcia_czy_przetasować=No pullable tiles found.__#13__Shuffle?
 
 t__brak_zdefiniowanych_układów_kostek=There are no defined cube layouts.
 t__brak_zdefiniowanych_obrazków_kostek=There are no defined cube images.

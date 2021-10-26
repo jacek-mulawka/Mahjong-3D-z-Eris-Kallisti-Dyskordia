@@ -31,9 +31,9 @@ Opcje_ScrollBox=Podpowiedź=Optionen.
 Wyświetlanie_Czasu_RadioGroup=Zeitanzeige
 Wyświetlanie_Czasu_RadioGroup=Elementy=Keine; Spielzeit; Zeit;
 Wyświetlanie_Ilości_Par_Do_Zdjęcia_CheckBox=Anzeige der Anzahl der zu entfernenden Paare
-Szerokość_Kostek_Etykieta_Label=Die Breite der Knöchel
-Wysokość_Kostek_Etykieta_Label=Knöchelhöhe
-Grubość_Kostek_Etykieta_Label=Die Dicke der Knöchel
+Szerokość_Kostek_Etykieta_Label=Fliesenbreite
+Wysokość_Kostek_Etykieta_Label=Fliesenhöhe
+Grubość_Kostek_Etykieta_Label=Fliesenstärke
 Szybkość_Kamery_Etykieta_Label=Kamerabewegungsgeschwindigkeit
 Szybkość_Zegara_Etykieta_Label=Taktfrequenz
 Margines_Planszy_Etykieta_Label=Seitenrand der Tafel
@@ -41,7 +41,7 @@ Wartości_Domyślne_Button=Standardwerte
 Wczytaj_Ustawienia_Button=Einstellungen laden
 Układ_Kostek_Nazwa_Wyczyść_Button=Der Name des Würfellayouts - klar
 Układ_Kostek_Nazwa_Wyczyść_Button=Podpowiedź=Der Name des Würfellayouts - klar.
-Kamera_Na_Środek_Układu_Kostek_CheckBox=Die Kamera schaut in die Mitte des Knöchelsystems
+Kamera_Na_Środek_Układu_Kostek_CheckBox=Die Kamera schaut auf die Mitte des Fliesensatzes
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatisches Laden des Cube-Layouts
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatisches Laden eines gespeicherten Würfelmusters zu Beginn des Spiels.
 Wczytuj_Konfigurację_Kostek_CheckBox=Würfelkonfiguration laden
