@@ -1,9 +1,9 @@
 # Mahjong-3D-z-Eris-Kallisti-Dyskordia
 
-Gra jednoosobowy mahjong. Umożliwia dodawanie własnych układów i obrazków kostek oraz tłumaczeń. Wystarczą do tego proste edytory tekstu i grafiki.
+Gra jednoosobowy mahjong. Umożliwia dodawanie własnych układów i obrazków kostek oraz tłumaczeń. Wystarczą do tego proste edytory tekstu i grafiki. Gra zawiera tłumaczenia na kilka wersji językowych.
 
 
-One person 'Mahjong 3D' support translations, create own tiles schema as well as own tiles pictures and that everything only by simple text or graphic editors.
+One person 'Mahjong 3D' support translations, create own tiles schema as well as own tiles pictures and that everything only by simple text or graphic editors. The game includes translations into several language versions.
 
 
 <a href="https://github.com/jacek-mulawka/Mahjong-3D-z-Eris-Kallisti-Dyskordia/blob/main/Gallery/Mahjong%203D%20z%20Eris%20Kallisti%20Dyskordia%2001.jpg">
