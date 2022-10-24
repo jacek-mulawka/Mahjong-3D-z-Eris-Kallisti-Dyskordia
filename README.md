@@ -3,6 +3,8 @@
 Gra jednoosobowy mahjong. Umożliwia dodawanie własnych układów i obrazków kostek oraz tłumaczeń. Wystarczą do tego proste edytory tekstu i grafiki. Gra zawiera tłumaczenia na kilka wersji językowych.
 
 
+## English
+
 One person 'Mahjong 3D' support translations, create own tiles schema as well as own tiles pictures and that everything only by simple text or graphic editors. The game includes translations into several language versions.
 
 
@@ -19,6 +21,7 @@ One person 'Mahjong 3D' support translations, create own tiles schema as well as
 </a>
 
 
+#
 Dziękuję za wsparcie.
 
 Thanks for the support.
@@ -38,6 +41,8 @@ The program has been presented.
 
 [Embarcadero](https://blogs.embarcadero.com/fun-open-source-3d-mahjong-game-is-made-in-delphi)
 
+
+#
 
 
 Powered by
