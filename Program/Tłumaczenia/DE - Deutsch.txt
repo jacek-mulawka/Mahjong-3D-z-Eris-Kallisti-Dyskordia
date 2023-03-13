@@ -4,9 +4,9 @@ Gra__Cofnij_MenuItem=Rückgängig machen
 Gra__Nowa_Gra_MenuItem=Neues Spiel
 Gra__Podpowiedź_MenuItem=Hinweis
 Gra__Przetasuj_MenuItem=Mischen
-Gra__Wyczyść_Planszę_MenuItem=Räumen Sie die Tafel auf
+Gra__Wyczyść_Planszę_MenuItem=Räumen die Tafel auf
 Gra__Wyjdź_MenuItem=Herauskommen
-Gra__Zaprezentuj_Kostki_MenuItem=Präsentieren Sie die Würfel
+Gra__Zaprezentuj_Kostki_MenuItem=Präsentieren die Würfel
 Układy_Kostek_MenuItem=Layouts von Würfeln
 Obrazki_Kostek_MenuItem=Bilder von Würfeln
 Opcje_MenuItem=Optionen
@@ -15,116 +15,115 @@ Kamera_Ruch_Ciągły_MenuItem=Ständige Kamerabewegung
 Pełny_Ekran_MenuItem=Vollbild
 
 Opcje_TabSheet=Optionen
-Opcje_TabSheet=Podpowiedź=Optionen.
+Opcje_TabSheet-->Podpowiedź=Optionen.
 Pomoc_TabSheet=Hilfe
-Pomoc_TabSheet=Podpowiedź=Hilfe.
+Pomoc_TabSheet-->Podpowiedź=Hilfe.
 Tłumaczenia_TabSheet=Übersetzungen
 O_Programie_TabSheet=Über das Programm
-O_Programie_TabSheet=Podpowiedź=Über das Programm.
+O_Programie_TabSheet-->Podpowiedź=Über das Programm.
 
 
-Zapisz_Ustawienia_Button=Speichern Sie die Einstellungen
-Opcje_Ukryj_Button=Podpowiedź=Optionen ausblenden.
+Zapisz_Ustawienia_Button=Speichern die Einstellungen
+Opcje_Ukryj_Button-->Podpowiedź=Optionen ausblenden.
 
 
-Opcje_ScrollBox=Podpowiedź=Optionen.
+Opcje_ScrollBox-->Podpowiedź=Optionen.
 Wyświetlanie_Czasu_RadioGroup=Zeitanzeige
-Wyświetlanie_Czasu_RadioGroup=Elementy=Keine; Spielzeit; Zeit;
+Wyświetlanie_Czasu_RadioGroup-->Elementy=Keine;Spielzeit;Zeit;
 Wyświetlanie_Ilości_Par_Do_Zdjęcia_CheckBox=Anzeige der Anzahl der zu entfernenden Paare
-Szerokość_Kostek_Etykieta_Label=Fliesenbreite
-Wysokość_Kostek_Etykieta_Label=Fliesenhöhe
-Grubość_Kostek_Etykieta_Label=Fliesenstärke
+Szerokość_Kostek_Etykieta_Label=Die Breite der Knöchel
+Wysokość_Kostek_Etykieta_Label=Knöchelhöhe
+Grubość_Kostek_Etykieta_Label=Die Dicke der Knöchel
 Szybkość_Kamery_Etykieta_Label=Kamerabewegungsgeschwindigkeit
 Szybkość_Zegara_Etykieta_Label=Taktfrequenz
 Margines_Planszy_Etykieta_Label=Seitenrand der Tafel
 Wartości_Domyślne_Button=Standardwerte
 Wczytaj_Ustawienia_Button=Einstellungen laden
 Układ_Kostek_Nazwa_Wyczyść_Button=Der Name des Würfellayouts - klar
-Układ_Kostek_Nazwa_Wyczyść_Button=Podpowiedź=Der Name des Würfellayouts - klar.
-Kamera_Na_Środek_Układu_Kostek_CheckBox=Die Kamera schaut auf die Mitte des Fliesensatzes
+Układ_Kostek_Nazwa_Wyczyść_Button-->Podpowiedź=Der Name des Würfellayouts - klar.
+Kamera_Na_Środek_Układu_Kostek_CheckBox=Die Kamera schaut in die Mitte des Knöchelsystems
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatisches Laden des Cube-Layouts
-Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatisches Laden eines gespeicherten Würfelmusters zu Beginn des Spiels.
+Automatyczne_Wczytywanie_Układu_Kostek_CheckBox-->Podpowiedź=Automatisches Laden eines gespeicherten Würfelmusters zu Beginn des Spiels.
 Wczytuj_Konfigurację_Kostek_CheckBox=Würfelkonfiguration laden
-Wczytuj_Konfigurację_Kostek_CheckBox=Podpowiedź=Legen Sie beim Laden der Würfelkonfiguration die Cube-Parameter in der Konfigurationsdatei des Cube-Layouts fest (falls verfügbar).
+Wczytuj_Konfigurację_Kostek_CheckBox-->Podpowiedź=Legen beim Laden der Würfelkonfiguration die Cube-Parameter in der Konfigurationsdatei des Cube-Layouts fest (falls verfügbar).
 Kostki_Kwiatków_CheckBox=Blumenwürfel
-Kostki_Kwiatków_CheckBox=Podpowiedź=Verwenden Sie anstelle von zwei Sätzen Saisonwürfel einen Satz Saisonwürfel und einen Satz Blumenwürfel.
+Kostki_Kwiatków_CheckBox-->Podpowiedź=Verwenden anstelle von zwei Sätzen Saisonwürfel einen Satz Saisonwürfel und einen Satz Blumenwürfel.
 Podpowiadaj_Tylko_Jeden_Ruch_CheckBox=Hinweisen nur eine Bewegung
 Pełny_Ekran_CheckBox=Vollbild
 Przybliżenie_CheckBox=Zoombedienfeld
-Przybliżenie_CheckBox=Podpowiedź=Zeigen Sie das Zoomfeld an.
+Przybliżenie_CheckBox-->Podpowiedź=Zeigen das Zoomfeld an.
 Obrazek_Tła_Planszy__Bok_Panel=
-Obrazek_Tła_Planszy__Bok_Panel=Podpowiedź=Wählen Sie einen Teil des Hintergrunds aus, der geändert werden soll.
+Obrazek_Tła_Planszy__Bok_Panel-->Podpowiedź=Wählen einen Teil des Hintergrunds aus, der geändert werden soll.
 Obrazek_Tła_Planszy__Góra_RadioButton=Oben
-Obrazek_Tła_Planszy__Góra_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Góra_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Lewo_RadioButton=Links
-Obrazek_Tła_Planszy__Lewo_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Lewo_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Przód_RadioButton=Vorderseite
-Obrazek_Tła_Planszy__Przód_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Przód_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Prawo_RadioButton=Recht
-Obrazek_Tła_Planszy__Prawo_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Prawo_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Dół_RadioButton=Nieder
-Obrazek_Tła_Planszy__Dół_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Dół_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Tył_RadioButton=Rückseite
-Obrazek_Tła_Planszy__Tył_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Tył_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Chmury_RadioButton=Wolken
-Obrazek_Tła_Planszy__Chmury_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Chmury_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Relative Bildpfade
-Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Podpowiedź=Speichern die Pfade zu den Bilddateien in relativer Form.
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox-->Podpowiedź=Speichern die Pfade zu den Bilddateien in relativer Form.
 Obrazek_Tła_Planszy__Wszystkie_RadioButton=Alle von ihnen
-Obrazek_Tła_Planszy__Wszystkie_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Wszystkie_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Wybierz_Button=Hintergrundbild für die Karte
-Obrazek_Tła_Planszy__Wybierz_Button=Podpowiedź=Wählen Sie ein Hintergrundbild für die Karte.
-Obrazek_Tła_Planszy__Wyświetl_CheckBox=Zeigen Sie das Hintergrundbild der Karte an
+Obrazek_Tła_Planszy__Wybierz_Button-->Podpowiedź=Wählen ein Hintergrundbild für die Karte.
+Obrazek_Tła_Planszy__Wyświetl_CheckBox=Zeigen das Hintergrundbild der Karte an
 Obrazek_Tła_Planszy__Brak_Button=Kein Hintergrundbild für die Tafel
-Obrazek_Tła_Planszy__Brak_Button=Podpowiedź=Kein Hintergrundbild für die Tafel.
+Obrazek_Tła_Planszy__Brak_Button-->Podpowiedź=Kein Hintergrundbild für die Tafel.
 Kamera_Współrzędne_Etykieta_Label=Die Koordinaten der Kamera und ihres Ziels
 
 
-Tłumaczenia_Panel=Podpowiedź=Übersetzungen.
+Tłumaczenia_Panel-->Podpowiedź=Übersetzungen.
 Tłumaczenia_Odśwież_Button=Aktualisierung
 Tłumaczenia_Zastosuj_Button=Anwenden
 Tłumaczenia_Domyślne_Button=Standard
-Tłumaczenia_Domyślne_Button=Podpowiedź=Legen Sie die Standardübersetzung__#13__fest.
+Tłumaczenia_Domyślne_Button-->Podpowiedź=Legen die Standardübersetzung fest.
 
-Pomoc_Memo=Podpowiedź=Hilfe.
+Pomoc_Memo-->Podpowiedź=Hilfe.
 
 Przybliżenie_Panel=^...v
-Przybliżenie_Panel=Podpowiedź=Annäherung.
+Przybliżenie_Panel-->Podpowiedź=Annäherung.
 
 
-t__odśwież_listę_układów_kostek=Aktualisieren Sie die Liste der Cube-Layouts
-t__odśwież_listę_obrazków_kostek=Aktualisieren Sie die Würfelbildliste
-t__brak_obrazków_kostek=Mangel
-t__domyślne_obrazki_kostek=Standard
-t__układ_kostek_nazwa=Name des Cube-Layouts: 
-t__układ_kostek_nazwa__brak=<keine>
+tłumaczenie_komunikaty_r.inne__obrazek_tła_planszy__filtr=Bilder | * .bmp; * .gif; * .jpg; * .jpeg; * .png; * .tif; * .tiff | Alle Dateien | *. *
+tłumaczenie_komunikaty_r.inne__układ_kostek_nazwa=Name des Cube-Layouts
+tłumaczenie_komunikaty_r.inne__układ_kostek_nazwa__brak=<keine>
 
-t__błąd=Fehler
-t__gratulacje=Herzliche Glückwünsche
-t__komunikat=Die Nachricht
-t__potwierdzenie=Bestätigung
+tłumaczenie_komunikaty_r.komunikat__błąd=Fehler
+tłumaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_obrazków_kostek=Es sind keine Würfelbilder definiert.
+tłumaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_układów_kostek=Es gibt keine definierten Cube-Layouts.
+tłumaczenie_komunikaty_r.komunikat__gratulacje=Herzliche Glückwünsche
+tłumaczenie_komunikaty_r.komunikat__komunikat=Die Nachricht
+tłumaczenie_komunikaty_r.komunikat__koniec_gry=Ende des Spiels.
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_obrazków_kostek=Cube-Bilderordner nicht gefunden
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_tłumaczeń=Übersetzungsordner nicht gefunden
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_układów_kostek=Cube-Layout-Ordner nicht gefunden
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_ściągnięcia=Keine ziehbaren Würfel gefunden.
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_ściągnięcia__czy_przetasować=Keine ziehbaren Würfel gefunden.#13#10Mischen?
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_pomocy=Hilfedatei nicht gefunden
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_tłumaczenia=Übersetzungsdatei nicht gefunden
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_układu_kostek=Cube-Layoutdatei nicht gefunden
+tłumaczenie_komunikaty_r.komunikat__potwierdzenie=Bestätigung
+tłumaczenie_komunikaty_r.komunikat__rozpocząć_grę_od_nowa=Spiel neu starten?
+tłumaczenie_komunikaty_r.komunikat__ustawić_pusty_obrazek_tła_planszy=Ein leeres Hintergrundbild für das Board festlegen?
+tłumaczenie_komunikaty_r.komunikat__wyczyścić_planszę=Die Tafel räumen?
+tłumaczenie_komunikaty_r.komunikat__zakończyć_działanie_programu=Programm beenden?
+tłumaczenie_komunikaty_r.komunikat__zapisać_ustawienia=Einstellungen speichern?
+tłumaczenie_komunikaty_r.komunikat__zaprezentować_kostki=Würfel präsentieren?#13#10Dies beendet das laufende Spiel.
 
-t__nie_odnaleziono_pliku_układu_kostek=Cube-Layoutdatei nicht gefunden: 
-t__nie_odnaleziono_pliku_tłumaczenia=Übersetzungsdatei nicht gefunden: 
-t__nie_odnaleziono_pliku_pomocy=Hilfedatei nicht gefunden: 
-t__nie_odnaleziono_katalogu_obrazków_kostek=Cube Bilder Verzeichnis nicht gefunden: 
+tłumaczenie_komunikaty_r.menu_pozycja__brak_obrazków_kostek=Keiner
+tłumaczenie_komunikaty_r.menu_pozycja__domyślne_obrazki_kostek=Standard
+tłumaczenie_komunikaty_r.menu_pozycja__odśwież_listę_obrazków_kostek=Aktualisieren die Würfelbildliste
+tłumaczenie_komunikaty_r.menu_pozycja__odśwież_listę_układów_kostek=Aktualisieren die Liste der Cube-Layouts
 
-t__koniec_gry=Ende des Spiels.
-t__nie_odnaleziono_kostek_do_ściągnięcia=Keine ziehbaren Würfel gefunden.
-t__nie_odnaleziono_kostek_do_ściągnięcia_czy_przetasować=Keine ziehbaren Würfel gefunden.__#13__Mischen?
-
-t__brak_zdefiniowanych_układów_kostek=Es gibt keine definierten Cube-Layouts.
-t__brak_zdefiniowanych_obrazków_kostek=Es sind keine Würfelbilder definiert.
-t__rozpocząć_grę_od_nowa=Spiel neu starten?
-t__wyczyścić_planszę=Die Tafel räumen?
-t__zakończyć_działanie_programu=Programm beenden?
-t__zapisać_ustawienia=Einstellungen speichern?
-t__zaprezentować_kostki=Würfel präsentieren?__#13__Dies beendet das laufende Spiel.
-
-t__przetasowania_ilość=Mischungen 
-t__podpowiedzi_ilość=Hinweise 
-t__cofnięcia_ilość=Rücknahmen 
-t__par_do_zdjęcia=Ziehbaren Würfelpaaren 
-
-t__ustawić_pusty_obrazek_tła_planszy=Ein leeres Hintergrundbild für das Board festlegen?
-t__obrazek_tła_planszy_filtr=Bilder | * .bmp; * .gif; * .jpg; * .jpeg; * .png; * .tif; * .tiff | Alle Dateien | *. *
+tłumaczenie_komunikaty_r.panel_napis__cofnięcia_ilość=Rücknahmen
+tłumaczenie_komunikaty_r.panel_napis__par_do_zdjęcia=Ziehbaren Würfelpaaren
+tłumaczenie_komunikaty_r.panel_napis__podpowiedzi_ilość=Hinweise
+tłumaczenie_komunikaty_r.panel_napis__przetasowania_ilość=Mischungen

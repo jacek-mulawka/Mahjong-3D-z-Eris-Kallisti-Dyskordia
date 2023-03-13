@@ -15,116 +15,115 @@ Kamera_Ruch_Ciągły_MenuItem=Constant camera movement
 Pełny_Ekran_MenuItem=Full screen
 
 Opcje_TabSheet=Options
-Opcje_TabSheet=Podpowiedź=Options.
+Opcje_TabSheet-->Podpowiedź=Options.
 Pomoc_TabSheet=Help
-Pomoc_TabSheet=Podpowiedź=Help.
+Pomoc_TabSheet-->Podpowiedź=Help.
 Tłumaczenia_TabSheet=Translations
 O_Programie_TabSheet=About program
-O_Programie_TabSheet=Podpowiedź=About program.
+O_Programie_TabSheet-->Podpowiedź=About program.
 
 
 Zapisz_Ustawienia_Button=Save the settings
-Opcje_Ukryj_Button=Podpowiedź=Hide options.
+Opcje_Ukryj_Button-->Podpowiedź=Hide options.
 
 
-Opcje_ScrollBox=Podpowiedź=Options.
+Opcje_ScrollBox-->Podpowiedź=Options.
 Wyświetlanie_Czasu_RadioGroup=Time display
-Wyświetlanie_Czasu_RadioGroup=Elementy=None; Game time; Time;
+Wyświetlanie_Czasu_RadioGroup-->Elementy=None;Game time;Time;
 Wyświetlanie_Ilości_Par_Do_Zdjęcia_CheckBox=Display of the number of pairs to be removed
-Szerokość_Kostek_Etykieta_Label=Tiles width
-Wysokość_Kostek_Etykieta_Label=Tiles height
-Grubość_Kostek_Etykieta_Label=Tiles thickness
+Szerokość_Kostek_Etykieta_Label=The width of the ankles
+Wysokość_Kostek_Etykieta_Label=Ankle height
+Grubość_Kostek_Etykieta_Label=The thickness of the ankles
 Szybkość_Kamery_Etykieta_Label=Camera movement speed
 Szybkość_Zegara_Etykieta_Label=Clock speed
 Margines_Planszy_Etykieta_Label=Board margin
 Wartości_Domyślne_Button=Default values
 Wczytaj_Ustawienia_Button=Load settings
 Układ_Kostek_Nazwa_Wyczyść_Button=The name of the cube layout - clear
-Układ_Kostek_Nazwa_Wyczyść_Button=Podpowiedź=The name of the cube layout - clear.
-Kamera_Na_Środek_Układu_Kostek_CheckBox=The camera looks at the center of the tiles set
+Układ_Kostek_Nazwa_Wyczyść_Button-->Podpowiedź=The name of the cube layout - clear.
+Kamera_Na_Środek_Układu_Kostek_CheckBox=The camera looks at the center of the ankle system
 Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Automatic loading of the cube layout
-Automatyczne_Wczytywanie_Układu_Kostek_CheckBox=Podpowiedź=Automatic loading of a saved cube pattern after starting the game.
+Automatyczne_Wczytywanie_Układu_Kostek_CheckBox-->Podpowiedź=Automatic loading of a saved cube pattern after starting the game.
 Wczytuj_Konfigurację_Kostek_CheckBox=Load cubes configuration
-Wczytuj_Konfigurację_Kostek_CheckBox=Podpowiedź=When loading cubes layout, set the cube parameters from the cube layout configuration file (if available).
+Wczytuj_Konfigurację_Kostek_CheckBox-->Podpowiedź=When loading cubes layout, set the cube parameters from the cube layout configuration file (if available).
 Kostki_Kwiatków_CheckBox=Flower cubes
-Kostki_Kwiatków_CheckBox=Podpowiedź=Instead of two sets of Season cubes, use one set of Season cubes and one set of Flower cubes.
+Kostki_Kwiatków_CheckBox-->Podpowiedź=Instead of two sets of Season cubes, use one set of Season cubes and one set of Flower cubes.
 Podpowiadaj_Tylko_Jeden_Ruch_CheckBox=Prompt only one move
 Pełny_Ekran_CheckBox=Full screen
 Przybliżenie_CheckBox=Zoom panel
-Przybliżenie_CheckBox=Podpowiedź=Display the zoom panel.
+Przybliżenie_CheckBox-->Podpowiedź=Display the zoom panel.
 Obrazek_Tła_Planszy__Bok_Panel=
-Obrazek_Tła_Planszy__Bok_Panel=Podpowiedź=Select a part of the background to be modified.
+Obrazek_Tła_Planszy__Bok_Panel-->Podpowiedź=Select a part of the background to be modified.
 Obrazek_Tła_Planszy__Góra_RadioButton=Top
-Obrazek_Tła_Planszy__Góra_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Góra_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Lewo_RadioButton=Left
-Obrazek_Tła_Planszy__Lewo_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Lewo_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Przód_RadioButton=Front
-Obrazek_Tła_Planszy__Przód_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Przód_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Prawo_RadioButton=Right
-Obrazek_Tła_Planszy__Prawo_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Prawo_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Dół_RadioButton=Down
-Obrazek_Tła_Planszy__Dół_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Dół_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Tył_RadioButton=Back
-Obrazek_Tła_Planszy__Tył_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Tył_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Chmury_RadioButton=Clouds
-Obrazek_Tła_Planszy__Chmury_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Chmury_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Relative image paths
-Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox=Podpowiedź=Try to save the paths to the image files in relative form.
+Obrazek_Tła_Planszy__Ścieżki_Względne_CheckBox-->Podpowiedź=Try to save the paths to the image files in relative form.
 Obrazek_Tła_Planszy__Wszystkie_RadioButton=All of them
-Obrazek_Tła_Planszy__Wszystkie_RadioButton=Podpowiedź=
+Obrazek_Tła_Planszy__Wszystkie_RadioButton-->Podpowiedź=
 Obrazek_Tła_Planszy__Wybierz_Button=Select a background image for the board
-Obrazek_Tła_Planszy__Wybierz_Button=Podpowiedź=Select a background image for the board.
+Obrazek_Tła_Planszy__Wybierz_Button-->Podpowiedź=Select a background image for the board.
 Obrazek_Tła_Planszy__Wyświetl_CheckBox=Display the background image of the board
 Obrazek_Tła_Planszy__Brak_Button=No background image for the board
-Obrazek_Tła_Planszy__Brak_Button=Podpowiedź=No background image for the board.
+Obrazek_Tła_Planszy__Brak_Button-->Podpowiedź=No background image for the board.
 Kamera_Współrzędne_Etykieta_Label=The coordinates of the camera and its target
 
 
-Tłumaczenia_Panel=Podpowiedź=Translations.
+Tłumaczenia_Panel-->Podpowiedź=Translations.
 Tłumaczenia_Odśwież_Button=Refresh
 Tłumaczenia_Zastosuj_Button=Apply
 Tłumaczenia_Domyślne_Button=Default
-Tłumaczenia_Domyślne_Button=Podpowiedź=Set the default translation.
+Tłumaczenia_Domyślne_Button-->Podpowiedź=Set the default translation.
 
-Pomoc_Memo=Podpowiedź=Help.
+Pomoc_Memo-->Podpowiedź=Help.
 
 Przybliżenie_Panel=^...v
-Przybliżenie_Panel=Podpowiedź=Zoom.
+Przybliżenie_Panel-->Podpowiedź=Zoom.
 
 
-t__odśwież_listę_układów_kostek=Refresh the list of cube layouts
-t__odśwież_listę_obrazków_kostek=Refresh the cube picture list
-t__brak_obrazków_kostek=None
-t__domyślne_obrazki_kostek=Default
-t__układ_kostek_nazwa=Cube Layout Name: 
-t__układ_kostek_nazwa__brak=<none>
+tłumaczenie_komunikaty_r.inne__obrazek_tła_planszy__filtr=Pictures | * .bmp; * .gif; * .jpg; *. jpeg; * .png; * .tif; * .tiff | All files | *. *
+tłumaczenie_komunikaty_r.inne__układ_kostek_nazwa=Cube Layout Name
+tłumaczenie_komunikaty_r.inne__układ_kostek_nazwa__brak=<none>
 
-t__błąd=Error
-t__gratulacje=Congratulations
-t__komunikat=Information
-t__potwierdzenie=Confirmation
+tłumaczenie_komunikaty_r.komunikat__błąd=Error
+tłumaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_obrazków_kostek=There are no defined cube images.
+tłumaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_układów_kostek=There are no defined cube layouts.
+tłumaczenie_komunikaty_r.komunikat__gratulacje=Congratulations
+tłumaczenie_komunikaty_r.komunikat__komunikat=Information
+tłumaczenie_komunikaty_r.komunikat__koniec_gry=End of the game.
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_obrazków_kostek=Cube pictures directory not found
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_tłumaczeń=Translation directory not found
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_układów_kostek=Cube layout directory not found
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_ściągnięcia=No pullable ankles found.
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_ściągnięcia__czy_przetasować=No pullable ankles found.#13#10Shuffle?
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_pomocy=Help file not found
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_tłumaczenia=Translation file not found
+tłumaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_układu_kostek=Cube Layout File not Found
+tłumaczenie_komunikaty_r.komunikat__potwierdzenie=Confirmation
+tłumaczenie_komunikaty_r.komunikat__rozpocząć_grę_od_nowa=Restart the game?
+tłumaczenie_komunikaty_r.komunikat__ustawić_pusty_obrazek_tła_planszy=Set an empty background image for the board?
+tłumaczenie_komunikaty_r.komunikat__wyczyścić_planszę=Clear the board?
+tłumaczenie_komunikaty_r.komunikat__zakończyć_działanie_programu=Exit the program?
+tłumaczenie_komunikaty_r.komunikat__zapisać_ustawienia=Save the settings?
+tłumaczenie_komunikaty_r.komunikat__zaprezentować_kostki=Showcase the cubes?#13#10This will end the game in progress.
 
-t__nie_odnaleziono_pliku_układu_kostek=Cube Layout File not Found: 
-t__nie_odnaleziono_pliku_tłumaczenia=Translation file not found: 
-t__nie_odnaleziono_pliku_pomocy=Help file not found: 
-t__nie_odnaleziono_katalogu_obrazków_kostek=Cube pictures directory not found: 
+tłumaczenie_komunikaty_r.menu_pozycja__brak_obrazków_kostek=None
+tłumaczenie_komunikaty_r.menu_pozycja__domyślne_obrazki_kostek=Default
+tłumaczenie_komunikaty_r.menu_pozycja__odśwież_listę_obrazków_kostek=Refresh the cube picture list
+tłumaczenie_komunikaty_r.menu_pozycja__odśwież_listę_układów_kostek=Refresh the list of cube layouts
 
-t__koniec_gry=End of the game.
-t__nie_odnaleziono_kostek_do_ściągnięcia=No pullable tiles found.
-t__nie_odnaleziono_kostek_do_ściągnięcia_czy_przetasować=No pullable tiles found.__#13__Shuffle?
-
-t__brak_zdefiniowanych_układów_kostek=There are no defined cube layouts.
-t__brak_zdefiniowanych_obrazków_kostek=There are no defined cube images.
-t__rozpocząć_grę_od_nowa=Restart the game?
-t__wyczyścić_planszę=Clear the board?
-t__zakończyć_działanie_programu=Exit the program?
-t__zapisać_ustawienia=Save the settings?
-t__zaprezentować_kostki=Showcase the cubes? This will end the game in progress.
-
-t__przetasowania_ilość=Shuffles 
-t__podpowiedzi_ilość=Hints 
-t__cofnięcia_ilość=Undo 
-t__par_do_zdjęcia=Pair to remove 
-
-t__ustawić_pusty_obrazek_tła_planszy=Set an empty background image for the board?
-t__obrazek_tła_planszy_filtr=Pictures | * .bmp; * .gif; * .jpg; *. jpeg; * .png; * .tif; * .tiff | All files | *. *
+tłumaczenie_komunikaty_r.panel_napis__cofnięcia_ilość=Undo
+tłumaczenie_komunikaty_r.panel_napis__par_do_zdjęcia=Pair to remove
+tłumaczenie_komunikaty_r.panel_napis__podpowiedzi_ilość=Hints
+tłumaczenie_komunikaty_r.panel_napis__przetasowania_ilość=Shuffles
