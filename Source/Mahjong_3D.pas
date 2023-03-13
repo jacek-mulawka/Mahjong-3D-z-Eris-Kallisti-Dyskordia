@@ -19,11 +19,51 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.StdCtrls,Vcl.Samples.Spin,
   System.StrUtils, System.IniFiles, Vcl.Imaging.jpeg, Vcl.Imaging.pngimage, Vcl.Imaging.GIFImg, System.Math,
+  System.Rtti, System.TypInfo,
   GLScene, GLObjects, GLCoordinates, GLWin32Viewer, GLCrossPlatform, GLBaseClasses,
   GLSpaceText, GLColor, GLSkyBox, GLMaterial, GLTexture;
 
 type
   TTabela_RGB = array[ 1..3 ] of integer;
+
+  TT³umaczenie_Komunikaty_r = record
+    inne__obrazek_t³a_planszy__filtr,
+    inne__uk³ad_kostek_nazwa,
+    inne__uk³ad_kostek_nazwa__brak,
+
+    komunikat__b³¹d,
+    komunikat__brak_zdefiniowanych_obrazków_kostek,
+    komunikat__brak_zdefiniowanych_uk³adów_kostek,
+    komunikat__gratulacje,
+    komunikat__komunikat,
+    komunikat__koniec_gry,
+    komunikat__nie_odnaleziono_katalogu_obrazków_kostek,
+    komunikat__nie_odnaleziono_katalogu_t³umaczeñ,
+    komunikat__nie_odnaleziono_katalogu_uk³adów_kostek,
+    komunikat__nie_odnaleziono_kostek_do_œci¹gniêcia,
+    komunikat__nie_odnaleziono_kostek_do_œci¹gniêcia__czy_przetasowaæ,
+    komunikat__nie_odnaleziono_pliku_pomocy,
+    komunikat__nie_odnaleziono_pliku_t³umaczenia,
+    komunikat__nie_odnaleziono_pliku_uk³adu_kostek,
+    komunikat__potwierdzenie,
+    komunikat__rozpocz¹æ_grê_od_nowa,
+    komunikat__ustawiæ_pusty_obrazek_t³a_planszy,
+    komunikat__wyczyœciæ_planszê,
+    komunikat__zakoñczyæ_dzia³anie_programu,
+    komunikat__zapisaæ_ustawienia,
+    komunikat__zaprezentowaæ_kostki,
+
+    menu_pozycja__brak_obrazków_kostek,
+    menu_pozycja__domyœlne_obrazki_kostek,
+    menu_pozycja__odœwie¿_listê_obrazków_kostek,
+    menu_pozycja__odœwie¿_listê_uk³adów_kostek,
+
+    panel_napis__cofniêcia_iloœæ,
+    panel_napis__par_do_zdjêcia,
+    panel_napis__podpowiedzi_iloœæ,
+    panel_napis__przetasowania_iloœæ
+      : string;
+  end;//---//TT³umaczenie_Komunikaty_r
 
   TKostka_Obrazek = class;
 
@@ -237,6 +277,8 @@ type
     procedure Timer1Timer( Sender: TObject );
   private
     { Private declarations }
+    blokuj_rysowanie_kostek : boolean;
+
     uk³ad_x, // Wymiary tablicy uk³adu (iloœæ koœci w liniach uk³adu wynosi + 1).
     uk³ad_y,
     uk³ad_z,
@@ -246,6 +288,7 @@ type
     par_do_zdjêcia_iloœæ,
     przybli¿enie_mysz_start_y
       : integer;
+
     kamera_œrodek_x, // Wspó³rzêdne pocz¹tkowe kamery.
     kamera_œrodek_y,
     kamera_œrodek_z,
@@ -253,10 +296,18 @@ type
     kamera_na_œrodek_y,
     kamera_punkt_kopia_z
       : single;
+
+    gra_czas_start,
+    gra_czas_koniec
+      : TDateTime;
+
     wczytany_uk³ad_kostek_nazwa_pliku,
     obrazki_kostek_nazwa_katalogu,
     kamera_ruch_ci¹g³y_treœæ
       : string;
+
+    t³umaczenie_komunikaty_r : TT³umaczenie_Komunikaty_r;
+
     mysz_start_punkt,
     kamera_punkt_kopia
       : TPointFloat;
@@ -265,53 +316,14 @@ type
     kostka_podpowiedŸ_2,
     kostka_demo
       : TKostka;
-    uk³ad_kostek_t : array of array of array of Char; // w, k, z; x, y, z
-    kostki_t : array of array of array of TKostka; // w, k, z; x, y, z
-    gra_czas_start,
-    gra_czas_koniec
-      : TDateTime;
-    blokuj_rysowanie_kostek : boolean;
+
     cofnij_t_r,
     podpowiedŸ_poprzednia_t_r
       : array of TCofnij_R;
-    {$region 'T³umaczenia.'}
-    t__odœwie¿_listê_uk³adów_kostek,
-    t__odœwie¿_listê_obrazków_kostek,
-    t__brak_obrazków_kostek,
-    t__domyœlne_obrazki_kostek,
-    t__uk³ad_kostek_nazwa,
-    t__uk³ad_kostek_nazwa__brak,
 
-    t__b³¹d,
-    t__gratulacje,
-    t__komunikat,
-    t__potwierdzenie,
+    uk³ad_kostek_t : array of array of array of Char; // w, k, z; x, y, z
+    kostki_t : array of array of array of TKostka; // w, k, z; x, y, z
 
-    t__nie_odnaleziono_pliku_uk³adu_kostek,
-    t__nie_odnaleziono_pliku_t³umaczenia,
-    t__nie_odnaleziono_pliku_pomocy,
-    t__nie_odnaleziono_katalogu_obrazków_kostek,
-
-    t__koniec_gry,
-    t__nie_odnaleziono_kostek_do_œci¹gniêcia,
-    t__nie_odnaleziono_kostek_do_œci¹gniêcia_czy_przetasowaæ,
-
-    t__brak_zdefiniowanych_uk³adów_kostek,
-    t__brak_zdefiniowanych_obrazków_kostek,
-    t__rozpocz¹æ_grê_od_nowa,
-    t__wyczyœciæ_planszê,
-    t__zakoñczyæ_dzia³anie_programu,
-    t__zapisaæ_ustawienia,
-    t__zaprezentowaæ_kostki,
-    t__przetasowania_iloœæ,
-    t__podpowiedzi_iloœæ,
-    t__cofniêcia_iloœæ,
-    t__par_do_zdjêcia,
-
-    t__ustawiæ_pusty_obrazek_t³a_planszy,
-    t__obrazek_t³a_planszy_filtr
-      : string;
-    {$endregion 'T³umaczenia.'}
     procedure Wczytaj_Listê_Uk³adów_Kostek( Sender : TObject );
     procedure Wczytaj_Uk³ad_Kostek( const nazwa_pliku : string; const zwolnij : boolean = false );
     procedure Utwórz_Kostkê( var kostka_f : TKostka; pozycja : Char );
@@ -362,7 +374,7 @@ begin
   Self.góra := 0;
   Self.lewo := 0;
 
-  //Self.Material.Texture.Enabled := true;//????
+  //Self.Material.Texture.Enabled := true; //????
 
   x := -1;
   y := -1;
@@ -493,7 +505,6 @@ var
   opis_b³êdu_zaznaczenie,
   rozszerzenie_pliku
     : string;
-  X, Y: Integer;
 const
   tekstura_œcianki = 'Œcianka';
 begin//Funkcja Wczytaj_Obrazek().
@@ -896,7 +907,7 @@ begin
   menu_item := TMenuItem.Create( Mahjong_3D_Form ); // Dla FindComponent().
   menu_item.Name := 'Uk³ady_Kostek__Odœwie¿_Listê_MenuItem';
   //menu_item.Caption := 'Odœwie¿ listê uk³adów kostek';
-  menu_item.Caption := t__odœwie¿_listê_uk³adów_kostek;
+  menu_item.Caption := t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_uk³adów_kostek;
   menu_item.OnClick := Wczytaj_Listê_Uk³adów_Kostek;
 
   Uk³ady_Kostek_MenuItem.Add( menu_item );
@@ -909,7 +920,7 @@ begin
     and ( TComponent(Sender).Name <> Mahjong_3D_Form.Name )
     and ( Uk³ady_Kostek_MenuItem.Count < 2 ) then
     //Application.MessageBox( 'Brak zdefiniowanych uk³adów kostek.', 'B³¹d', MB_ICONEXCLAMATION + MB_OK );
-    Application.MessageBox(  PChar( t__brak_zdefiniowanych_uk³adów_kostek ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+    Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_uk³adów_kostek ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
 
 end;//---//Funkcja Wczytaj_Listê_Uk³adów_Kostek().
 
@@ -1322,7 +1333,7 @@ begin//Funkcja Wczytaj_Uk³ad_Kostek().
           FindClose( search_rec );
           //Application.MessageBox(  PChar( 'Nie odnaleziono pliku uk³adu kostek: ' + zts + '.' ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK  );
           Screen.Cursor := crDefault;
-          Application.MessageBox(  PChar( t__nie_odnaleziono_pliku_uk³adu_kostek + zts + '.' ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+          Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_uk³adu_kostek + ': ' + zts + '.' ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
           Exit;
 
         end;
@@ -1334,7 +1345,7 @@ begin//Funkcja Wczytaj_Uk³ad_Kostek().
 
       wczytany_uk³ad_kostek_nazwa_pliku := nazwa_pliku;
       //Uk³ad_Kostek_Nazwa_Label.Caption := 'Nazwa uk³adu kostek: ' + wczytany_uk³ad_kostek_nazwa_pliku + '.';
-      Uk³ad_Kostek_Nazwa_Label.Caption := t__uk³ad_kostek_nazwa + wczytany_uk³ad_kostek_nazwa_pliku + '.';
+      Uk³ad_Kostek_Nazwa_Label.Caption := t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa + ': ' + wczytany_uk³ad_kostek_nazwa_pliku + '.';
 
       x := 0;
       y := 0;
@@ -1674,7 +1685,7 @@ begin
     end;
   //---//if pozycja in [ '<', '>' ] then
 
-  kostka_f.Przerysuj_Kostkê();//????
+  kostka_f.Przerysuj_Kostkê(); //????
 
 end;//---//Funkcja Utwórz_Kostkê().
 
@@ -1925,7 +1936,7 @@ begin
         Gra__Demo_MenuItem.Checked := false;
 
       //Application.MessageBox( 'Koniec gry.', 'Gratulacje', MB_ICONINFORMATION + MB_OK );
-      Application.MessageBox(  PChar( t__koniec_gry ), PChar( t__gratulacje ), MB_ICONINFORMATION + MB_OK  );
+      Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__koniec_gry ), PChar( t³umaczenie_komunikaty_r.komunikat__gratulacje ), MB_ICONINFORMATION + MB_OK  );
 
     end;
   //---//if x <= 1 then
@@ -1936,7 +1947,7 @@ begin
     and ( Wyœwietlanie_Iloœci_Par_Do_Zdjêcia_CheckBox.Checked )
     and ( not Gra__Demo_MenuItem.Checked ) then
     //if Application.MessageBox( 'Nie odnaleziono kostek do œci¹gniêcia.' + #13 + 'Czy przetasowaæ?', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO ) = IDYES then
-    if Application.MessageBox(  PChar( t__nie_odnaleziono_kostek_do_œci¹gniêcia_czy_przetasowaæ ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO  ) = IDYES then
+    if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_œci¹gniêcia__czy_przetasowaæ ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO  ) = IDYES then
        Gra__Przetasuj_MenuItemClick( nil );
 
 end;//---//Funkcja Zdejmij_Kostki().
@@ -2300,8 +2311,8 @@ begin//Funkcja Wczytaj_Ustawienia().
       FindClose( search_rec );
 
       if FindFirst(  ExtractFileDir( zts_1 ), faDirectory, search_rec  ) <> 0 then
-        Application.MessageBox(   PChar(  'Nie odnaleziono katalogu uk³adów kostek: ' + ExtractFileDir( zts_1 ) + '.'  ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK   )
-        //Application.MessageBox(   PChar(  t__nie_odnaleziono_katalogu + ExtractFileDir( zts_1 ) + '.'  ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK   )
+        //Application.MessageBox(   PChar(  'Nie odnaleziono katalogu uk³adów kostek: ' + ExtractFileDir( zts_1 ) + '.'  ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK   )
+        Application.MessageBox(   PChar(  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_uk³adów_kostek + ': ' + ExtractFileDir( zts_1 ) + '.'  ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK   )
       else//if FindFirst(  ExtractFileDir( zts_1 ), faDirectory, search_rec  ) <> 0 then
         begin
 
@@ -2356,8 +2367,8 @@ begin//Funkcja Wczytaj_Ustawienia().
       FindClose( search_rec );
 
       if FindFirst(  ExtractFileDir( zts_1 ), faDirectory, search_rec  ) <> 0 then
-        Application.MessageBox(   PChar(  'Nie odnaleziono katalogu t³umaczeñ: ' + ExtractFileDir( zts_1 ) + '.'  ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK   )
-        //Application.MessageBox(   PChar(  t__nie_odnaleziono_katalogu + ExtractFileDir( zts_1 ) + '.'  ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK   )
+        //Application.MessageBox(   PChar(  'Nie odnaleziono katalogu t³umaczeñ: ' + ExtractFileDir( zts_1 ) + '.'  ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK   )
+        Application.MessageBox(   PChar(  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_t³umaczeñ + ': ' + ExtractFileDir( zts_1 ) + '.'  ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK   )
       else//if FindFirst(  ExtractFileDir( zts_1 ), faDirectory, search_rec  ) <> 0 then
         begin
 
@@ -2405,8 +2416,8 @@ begin//Funkcja Wczytaj_Ustawienia().
       FindClose( search_rec );
 
       if FindFirst(  ExtractFileDir( zts_1 ), faDirectory, search_rec  ) <> 0 then
-        Application.MessageBox(   PChar(  'Nie odnaleziono katalogu obrazków kostek: ' + ExtractFileDir( zts_1 ) + '.'  ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK   )
-        //Application.MessageBox(   PChar(  t__nie_odnaleziono_katalogu_obrazków_kostek + ExtractFileDir( zts_1 ) + '.'  ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK   )
+        //Application.MessageBox(   PChar(  'Nie odnaleziono katalogu obrazków kostek: ' + ExtractFileDir( zts_1 ) + '.'  ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK   )
+        Application.MessageBox(   PChar(  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_obrazków_kostek + ': ' + ExtractFileDir( zts_1 ) + '.'  ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK   )
       else//if FindFirst(  ExtractFileDir( zts_1 ), faDirectory, search_rec  ) <> 0 then
         begin
 
@@ -2520,7 +2531,7 @@ var
 begin
 
   //if Application.MessageBox( 'Zapisaæ ustawienia?', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2 ) <> IDYES then
-  if Application.MessageBox(  PChar( t__zapisaæ_ustawienia ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) <> IDYES then
+  if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__zapisaæ_ustawienia ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) <> IDYES then
     Exit;
 
 
@@ -2619,44 +2630,55 @@ end;//---//Funkcja Wczytaj_Listê_T³umaczeñ().
 
 //Funkcja Wczytaj_T³umaczenie().
 procedure TMahjong_3D_Form.Wczytaj_T³umaczenie( const nazwa_pliku : string );
+const
+  t³umaczenie_komunikaty_r_c_l : string = 't³umaczenie_komunikaty_r.';
+  t³umaczenie__nowa_linia_c_l : string = '#13#10';
+  t³umaczenie__wyró¿nik__elementy_c_l : string = '-->Elementy';
+  t³umaczenie__wyró¿nik__podpowiedŸ_c_l : string = '-->PodpowiedŸ';
+
 var
-  tekst_l : TStringList;
-  search_rec : TSearchRec;
-  zt_component : TComponent;
+  czy_elementy, // Czy t³umaczenie dotyczy elementów komponentu (np. pozycje listy rozwijanej).
+  czy_podpowiedŸ // Czy t³umaczenie dotyczy podpowiedzi komponentu.
+    : boolean;
+
   i,
   zti_1,
   zti_2
     : integer;
+
   zts_1,
   zts_2,
   nazwa
-  //t³umaczenie
     : string;
-  czy_podpowiedŸ : boolean;
-begin
 
+  rtti_field : TRttiField;
+  rtti_type : TRttiType;
+
+  tekst_l : TStringList;
+  zt_component : TComponent;
+begin
 
   zts_1 := ExtractFilePath( Application.ExeName ) + 'T³umaczenia\' + nazwa_pliku + '.txt';
 
-  if FindFirst( zts_1, faAnyFile, search_rec ) <> 0 then // Sprawdza czy istnieje plik.
+  if not FileExists( zts_1 ) then // Sprawdza czy istnieje plik.
     begin
 
-      FindClose( search_rec );
       //Application.MessageBox(  PChar( 'Nie odnaleziono pliku t³umaczenia: ' + zts_1 + '.' ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK  );
-      Application.MessageBox(  PChar( t__nie_odnaleziono_pliku_t³umaczenia + zts_1 + '.' ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+      Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_t³umaczenia + ': ' + zts_1 + '.' ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
       Wczytaj_Pomoc( nazwa_pliku );
       Exit;
 
     end;
-  //---//if FindFirst( zts_1, faAnyFile, search_rec ) <> 0 then // Sprawdza czy istnieje plik.
+  //---//if not FileExists( zts_1 ) then
 
   Screen.Cursor := crHourGlass;
 
-  FindClose( search_rec );
-
-
   tekst_l := TStringList.Create();
   tekst_l.LoadFromFile( zts_1 ); // Je¿eli pliku nie ma to nie trzeba wczytywaæ, mo¿na od razu dodawaæ linie.
+
+  if tekst_l.Count > 0 then //???
+    rtti_type := TRTTIContext.Create.GetType(  TypeInfo( TT³umaczenie_Komunikaty_r )  );
+
 
   for i := 0 to tekst_l.Count - 1 do
     begin
@@ -2673,7 +2695,7 @@ begin
             or (  Pos( 'Obrazki_Kostek__Obrazek_Kostek_', zts_1 ) > 0  )
             or (
                      (  Pos( 'T³umaczenia_Panel', zts_1 ) > 0  ) // Etykieta panelu t³umaczenia nie podlega t³umaczeniu.
-                 and (  Pos( '=PodpowiedŸ=', zts_1 ) <= 0  )
+                 and (  Pos( t³umaczenie__wyró¿nik__podpowiedŸ_c_l + '=', zts_1 ) <= 0  )
 
                ) then
             zti_1 := -1;
@@ -2689,20 +2711,31 @@ begin
           if zti_1 > 1 then
             begin
 
-              if Pos( 't__', zts_1 ) <= 0 then
+              if Pos( t³umaczenie_komunikaty_r_c_l, zts_1 ) <= 0 then
                 begin
 
                   {$region 'Komponenty.'}
-                  if Pos( '=PodpowiedŸ=', zts_1 ) > 0 then
+                  if Pos( t³umaczenie__wyró¿nik__podpowiedŸ_c_l + '=', zts_1 ) > 0 then
                     begin
 
                       czy_podpowiedŸ := true;
-                      zts_1 := StringReplace( zts_1, '=PodpowiedŸ', '', [] );
+                      zts_1 := StringReplace( zts_1, t³umaczenie__wyró¿nik__podpowiedŸ_c_l , '', [] );
                       zti_1 := Pos( '=', zts_1 );
 
                     end
-                  else//if Pos( '=PodpowiedŸ=', zts_1 ) > 0 then
+                  else//if Pos( t³umaczenie__wyró¿nik__podpowiedŸ_c_l + '=', zts_1 ) > 0 then
                     czy_podpowiedŸ := false;
+
+                  if Pos( t³umaczenie__wyró¿nik__elementy_c_l + '=', zts_1 ) > 0 then
+                    begin
+
+                      czy_elementy := true;
+                      zts_1 := StringReplace( zts_1, t³umaczenie__wyró¿nik__elementy_c_l, '', [] );
+                      zti_1 := Pos( '=', zts_1 );
+
+                    end
+                  else//if Pos( t³umaczenie__wyró¿nik__elementy_c_l + '=', zts_1 ) > 0 then
+                    czy_elementy := false;
 
 
                   nazwa := Copy( zts_1, 1, zti_1 - 1 );
@@ -2728,7 +2761,7 @@ begin
                   if zt_component <> nil then
                     begin
 
-                      zts_1 := StringReplace( zts_1, '__#13__', #13, [ rfReplaceAll ] );
+                      zts_1 := StringReplace( zts_1, t³umaczenie__nowa_linia_c_l, #13 + #10, [ rfReplaceAll ] );
 
                       if Pos( '_Button', nazwa ) > 0 then
                         begin
@@ -2796,17 +2829,12 @@ begin
                           if not czy_podpowiedŸ then
                             begin
 
-                              zti_1 := Pos( 'Elementy=', zts_1 );
-
-                              if zti_1 <= 0 then
+                              if not czy_elementy then
                                 TRadioGroup(zt_component).Caption := zts_1
-                              else//if zti_1 <= 0 then
+                              else//if not czy_elementy then
                                 begin
 
                                   zti_2 := TRadioGroup(zt_component).ItemIndex;
-
-                                  zti_1 := Pos( '=', zts_1 );
-                                  Delete( zts_1, 1, zti_1 );
 
                                   TRadioGroup(zt_component).Items.Clear();
 
@@ -2835,7 +2863,7 @@ begin
                               //---//if zti_1 <= 0 then
 
                             end
-                          else//if not czy_podpowiedŸ then
+                          else//if not czy_elementy then
                             TRadioGroup(zt_component).Hint := zts_1;
 
                         end
@@ -2865,115 +2893,42 @@ begin
                   {$endregion 'Komponenty.'}
 
                 end
-              else//if Pos( 't__', zts_1 ) <= 0 then
+              else//if Pos( t³umaczenie_komunikaty_r_c_l, zts_1 ) <= 0 then
                 begin
 
                   {$region 'Komunikaty.'}
+                  // Wariant bez RTTI.
+                  //
+                  //nazwa := Copy( zts_1, 1, zti_1 - 1 );
+                  //Delete( zts_1, 1, zti_1 );
+                  //
+                  //zts_1 := StringReplace( zts_1, t³umaczenie__nowa_linia_c_l, #13 + #10, [ rfReplaceAll ] );
+                  //
+                  //if nazwa = 't³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa' then // Wszystkie pola rekordu nale¿y rozpisaæ w ten sposób.
+                  //  t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa := zts_1;
+                  //---// Wariant bez RTTI.
+
                   nazwa := Copy( zts_1, 1, zti_1 - 1 );
                   Delete( zts_1, 1, zti_1 );
 
-                  zts_1 := StringReplace( zts_1, '__#13__', #13, [ rfReplaceAll ] );
+                  nazwa := StringReplace( nazwa, t³umaczenie_komunikaty_r_c_l, '', [ rfReplaceAll ] );
+                  zts_1 := StringReplace( zts_1, t³umaczenie__nowa_linia_c_l, #13 + #10, [ rfReplaceAll ] );
 
-                  if nazwa = 't__odœwie¿_listê_uk³adów_kostek' then
-                    t__odœwie¿_listê_uk³adów_kostek := zts_1
-                  else
-                  if nazwa = 't__odœwie¿_listê_obrazków_kostek' then
-                    t__odœwie¿_listê_obrazków_kostek := zts_1
-                  else
-                  if nazwa = 't__brak_obrazków_kostek' then
-                    t__brak_obrazków_kostek := zts_1
-                  else
-                  if nazwa = 't__domyœlne_obrazki_kostek' then
-                    t__domyœlne_obrazki_kostek := zts_1
-                  else
-                  if nazwa = 't__uk³ad_kostek_nazwa' then
-                    t__uk³ad_kostek_nazwa := zts_1
-                  else
-                  if nazwa = 't__uk³ad_kostek_nazwa__brak' then
-                    t__uk³ad_kostek_nazwa__brak := zts_1
-                  else
+                  for rtti_field in rtti_type.GetFields do
+                    if rtti_field.Name = nazwa then
+                      begin
 
-                  if nazwa = 't__b³¹d' then
-                    t__b³¹d := zts_1
-                  else
-                  if nazwa = 't__gratulacje' then
-                    t__gratulacje := zts_1
-                  else
-                  if nazwa = 't__komunikat' then
-                    t__komunikat := zts_1
-                  else
-                  if nazwa = 't__potwierdzenie' then
-                    t__potwierdzenie := zts_1
-                  else
+                        if rtti_field.GetValue( @t³umaczenie_komunikaty_r ).Kind in [ System.TypInfo.tkUString, System.TypInfo.tkString, System.TypInfo.tkWString ] then
+                          rtti_field.SetValue( @t³umaczenie_komunikaty_r, zts_1 );
 
-                  if nazwa = 't__nie_odnaleziono_pliku_uk³adu_kostek' then
-                    t__nie_odnaleziono_pliku_uk³adu_kostek := zts_1
-                  else
-                  if nazwa = 't__nie_odnaleziono_pliku_t³umaczenia' then
-                    t__nie_odnaleziono_pliku_t³umaczenia := zts_1
-                  else
-                  if nazwa = 't__nie_odnaleziono_pliku_pomocy' then
-                    t__nie_odnaleziono_pliku_pomocy := zts_1
-                  else
-                  if nazwa = 't__nie_odnaleziono_katalogu_obrazków_kostek' then
-                    t__nie_odnaleziono_katalogu_obrazków_kostek := zts_1
-                  else
+                        Break;
 
-                  if nazwa = 't__koniec_gry' then
-                    t__koniec_gry := zts_1
-                  else
-                  if nazwa = 't__nie_odnaleziono_kostek_do_œci¹gniêcia' then
-                    t__nie_odnaleziono_kostek_do_œci¹gniêcia := zts_1
-                  else
-                  if nazwa = 't__nie_odnaleziono_kostek_do_œci¹gniêcia_czy_przetasowaæ' then
-                    t__nie_odnaleziono_kostek_do_œci¹gniêcia_czy_przetasowaæ := zts_1
-                  else
-
-                  if nazwa = 't__brak_zdefiniowanych_uk³adów_kostek' then
-                    t__brak_zdefiniowanych_uk³adów_kostek := zts_1
-                  else
-                  if nazwa = 't__brak_zdefiniowanych_obrazków_kostek' then
-                    t__brak_zdefiniowanych_obrazków_kostek := zts_1
-                  else
-                  if nazwa = 't__rozpocz¹æ_grê_od_nowa' then
-                    t__rozpocz¹æ_grê_od_nowa := zts_1
-                  else
-                  if nazwa = 't__wyczyœciæ_planszê' then
-                    t__wyczyœciæ_planszê := zts_1
-                  else
-                  if nazwa = 't__zakoñczyæ_dzia³anie_programu' then
-                    t__zakoñczyæ_dzia³anie_programu := zts_1
-                  else
-                  if nazwa = 't__zapisaæ_ustawienia' then
-                    t__zapisaæ_ustawienia := zts_1
-                  else
-                  if nazwa = 't__zaprezentowaæ_kostki' then
-                    t__zaprezentowaæ_kostki := zts_1
-                  else
-                  if nazwa = 't__przetasowania_iloœæ' then
-                    t__przetasowania_iloœæ := zts_1
-                  else
-                  if nazwa = 't__podpowiedzi_iloœæ' then
-                    t__podpowiedzi_iloœæ := zts_1
-                  else
-                  if nazwa = 't__cofniêcia_iloœæ' then
-                    t__cofniêcia_iloœæ := zts_1
-                  else
-                  if nazwa = 't__par_do_zdjêcia' then
-                    t__par_do_zdjêcia := zts_1
-                  else
-
-                  if nazwa = 't__ustawiæ_pusty_obrazek_t³a_planszy' then
-                    t__ustawiæ_pusty_obrazek_t³a_planszy := zts_1
-                  else
-                  if nazwa = 't__obrazek_t³a_planszy_filtr' then
-                    t__obrazek_t³a_planszy_filtr := zts_1
-                  else
-                    ;
+                      end;
+                    //---//if rtti_field.Name = nazwa then
                   {$endregion 'Komunikaty.'}
 
                 end;
-              //---//if Pos( 't__', zts_1 ) <= 0 then
+              //---//if Pos( t³umaczenie_komunikaty_r_c_l, zts_1 ) <= 0 then
 
             end;
           //---//if zti_1 > 1 then
@@ -2989,37 +2944,37 @@ begin
 
   if wczytany_uk³ad_kostek_nazwa_pliku <> '' then
     //Uk³ad_Kostek_Nazwa_Label.Caption := 'Nazwa uk³adu kostek: ' + wczytany_uk³ad_kostek_nazwa_pliku + '.'
-    Uk³ad_Kostek_Nazwa_Label.Caption := t__uk³ad_kostek_nazwa + wczytany_uk³ad_kostek_nazwa_pliku + '.'
+    Uk³ad_Kostek_Nazwa_Label.Caption := t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa + ': ' + wczytany_uk³ad_kostek_nazwa_pliku + '.'
   else//if wczytany_uk³ad_kostek_nazwa_pliku <> '' then
     //Uk³ad_Kostek_Nazwa_Label.Caption := 'Nazwa uk³adu kostek: <brak>.';
-    Uk³ad_Kostek_Nazwa_Label.Caption := t__uk³ad_kostek_nazwa + t__uk³ad_kostek_nazwa__brak + '.';
+    Uk³ad_Kostek_Nazwa_Label.Caption := t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa + ': ' + t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa__brak + '.';
 
   zt_component := nil;
   zt_component := Mahjong_3D_Form.FindComponent( 'Uk³ady_Kostek__Odœwie¿_Listê_MenuItem' );
 
   if zt_component <> nil then
-    TMenuItem(zt_component).Caption := t__odœwie¿_listê_uk³adów_kostek;
+    TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_uk³adów_kostek;
 
 
   zt_component := nil;
   zt_component := Mahjong_3D_Form.FindComponent( 'Obrazki_Kostek__Odœwie¿_Listê_MenuItem' );
 
   if zt_component <> nil then
-    TMenuItem(zt_component).Caption := t__odœwie¿_listê_obrazków_kostek;
+    TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_obrazków_kostek;
 
 
   zt_component := nil;
   zt_component := Mahjong_3D_Form.FindComponent( 'Obrazki_Kostek__Brak_MenuItem' );
 
   if zt_component <> nil then
-    TMenuItem(zt_component).Caption := t__brak_obrazków_kostek;
+    TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__brak_obrazków_kostek;
 
 
   zt_component := nil;
   zt_component := Mahjong_3D_Form.FindComponent( 'Obrazki_Kostek__Domyœlne_MenuItem' );
 
   if zt_component <> nil then
-    TMenuItem(zt_component).Caption := t__domyœlne_obrazki_kostek;
+    TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__domyœlne_obrazki_kostek;
 
 
   Screen.Cursor := crDefault;
@@ -3041,42 +2996,41 @@ var
 begin
 
   {$region 'T³umaczenia.'}
-  t__odœwie¿_listê_uk³adów_kostek := 'Odœwie¿ listê uk³adów kostek';
-  t__odœwie¿_listê_obrazków_kostek := 'Odœwie¿ listê obrazków kostek';
-  t__brak_obrazków_kostek := 'Brak';
-  t__domyœlne_obrazki_kostek := 'Domyœlne';
-  t__uk³ad_kostek_nazwa := 'Nazwa uk³adu kostek: ';
-  t__uk³ad_kostek_nazwa__brak := '<brak>';
+  t³umaczenie_komunikaty_r.inne__obrazek_t³a_planszy__filtr := 'Obrazki|*.bmp; *.gif; *.jpg; *.jpeg; *.png; *.tif; *.tiff|Wszystkie pliki|*.*';
+  t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa := 'Nazwa uk³adu kostek';
+  t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa__brak := '<brak>';
 
-  t__b³¹d := 'B³¹d';
-  t__gratulacje := 'Gratulacje';
-  t__komunikat := 'Komunikat';
-  t__potwierdzenie := 'Potwierdzenie';
+  t³umaczenie_komunikaty_r.komunikat__b³¹d := 'B³¹d';
+  t³umaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_obrazków_kostek := 'Brak zdefiniowanych obrazków kostek.';
+  t³umaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_uk³adów_kostek := 'Brak zdefiniowanych uk³adów kostek.';
+  t³umaczenie_komunikaty_r.komunikat__gratulacje := 'Gratulacje';
+  t³umaczenie_komunikaty_r.komunikat__komunikat := 'Komunikat';
+  t³umaczenie_komunikaty_r.komunikat__koniec_gry := 'Koniec gry.';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_obrazków_kostek := 'Nie odnaleziono katalogu obrazków kostek';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_t³umaczeñ := 'Nie odnaleziono katalogu t³umaczeñ';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_uk³adów_kostek := 'Nie odnaleziono katalogu uk³adów kostek';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_œci¹gniêcia := 'Nie odnaleziono kostek do œci¹gniêcia.';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_œci¹gniêcia__czy_przetasowaæ := 'Nie odnaleziono kostek do œci¹gniêcia.' + #13 + 'Czy przetasowaæ?';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_pomocy := 'Nie odnaleziono pliku pomocy';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_t³umaczenia := 'Nie odnaleziono pliku t³umaczenia';
+  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_uk³adu_kostek := 'Nie odnaleziono pliku uk³adu kostek';
+  t³umaczenie_komunikaty_r.komunikat__potwierdzenie := 'Potwierdzenie';
+  t³umaczenie_komunikaty_r.komunikat__rozpocz¹æ_grê_od_nowa := 'Rozpocz¹æ grê od nowa?';
+  t³umaczenie_komunikaty_r.komunikat__ustawiæ_pusty_obrazek_t³a_planszy := 'Ustawiæ pusty obrazek t³a planszy?';
+  t³umaczenie_komunikaty_r.komunikat__wyczyœciæ_planszê := 'Wyczyœciæ planszê?';
+  t³umaczenie_komunikaty_r.komunikat__zakoñczyæ_dzia³anie_programu := 'Zakoñczyæ dzia³anie programu?';
+  t³umaczenie_komunikaty_r.komunikat__zapisaæ_ustawienia := 'Zapisaæ ustawienia?';
+  t³umaczenie_komunikaty_r.komunikat__zaprezentowaæ_kostki := 'Zaprezentowaæ kostki?' + #13 + 'Zakoñczy to trwaj¹c¹ grê.';
 
-  t__nie_odnaleziono_pliku_uk³adu_kostek := 'Nie odnaleziono pliku uk³adu kostek: ';
-  t__nie_odnaleziono_pliku_t³umaczenia := 'Nie odnaleziono pliku t³umaczenia: ';
-  t__nie_odnaleziono_pliku_pomocy := 'Nie odnaleziono pliku pomocy: ';
-  t__nie_odnaleziono_katalogu_obrazków_kostek := 'Nie odnaleziono katalogu obrazków kostek: ';
+  t³umaczenie_komunikaty_r.menu_pozycja__brak_obrazków_kostek := 'Brak';
+  t³umaczenie_komunikaty_r.menu_pozycja__domyœlne_obrazki_kostek := 'Domyœlne';
+  t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_obrazków_kostek := 'Odœwie¿ listê obrazków kostek';
+  t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_uk³adów_kostek := 'Odœwie¿ listê uk³adów kostek';
 
-  t__koniec_gry := 'Koniec gry.';
-  t__nie_odnaleziono_kostek_do_œci¹gniêcia := 'Nie odnaleziono kostek do œci¹gniêcia.';
-  t__nie_odnaleziono_kostek_do_œci¹gniêcia_czy_przetasowaæ := 'Nie odnaleziono kostek do œci¹gniêcia.' + #13 + 'Czy przetasowaæ?';
-
-  t__brak_zdefiniowanych_uk³adów_kostek := 'Brak zdefiniowanych uk³adów kostek.';
-  t__brak_zdefiniowanych_obrazków_kostek := 'Brak zdefiniowanych obrazków kostek.';
-  t__rozpocz¹æ_grê_od_nowa := 'Rozpocz¹æ grê od nowa?';
-  t__wyczyœciæ_planszê := 'Wyczyœciæ planszê?';
-  t__zakoñczyæ_dzia³anie_programu := 'Zakoñczyæ dzia³anie programu?';
-  t__zapisaæ_ustawienia := 'Zapisaæ ustawienia?';
-  t__zaprezentowaæ_kostki := 'Zaprezentowaæ kostki?' + #13 + 'Zakoñczy to trwaj¹c¹ grê.';
-
-  t__przetasowania_iloœæ := 'Przetasowania ';
-  t__podpowiedzi_iloœæ := 'Podpowiedzi ';
-  t__cofniêcia_iloœæ := 'Cofniêcia ';
-  t__par_do_zdjêcia := 'Par do zdjêcia ';
-
-  t__ustawiæ_pusty_obrazek_t³a_planszy := 'Ustawiæ pusty obrazek t³a planszy?';
-  t__obrazek_t³a_planszy_filtr := 'Obrazki|*.bmp; *.gif; *.jpg; *.jpeg; *.png; *.tif; *.tiff|Wszystkie pliki|*.*';
+  t³umaczenie_komunikaty_r.panel_napis__cofniêcia_iloœæ := 'Cofniêcia';
+  t³umaczenie_komunikaty_r.panel_napis__par_do_zdjêcia := 'Par do zdjêcia';
+  t³umaczenie_komunikaty_r.panel_napis__podpowiedzi_iloœæ := 'Podpowiedzi';
+  t³umaczenie_komunikaty_r.panel_napis__przetasowania_iloœæ := 'Przetasowania';
   {$endregion 'T³umaczenia.'}
 
   if    ( Sender <> nil )
@@ -3125,15 +3079,15 @@ begin
       Opcje_ScrollBox.Hint := '';
       Wyœwietlanie_Czasu_RadioGroup.Caption := 'Wyœwietlanie czasu';
 
-      zti := Wyœwietlanie_Czasu_RadioGroup.ItemIndex;
-      Wyœwietlanie_Czasu_RadioGroup.Items.Clear();
-      Wyœwietlanie_Czasu_RadioGroup.Items.Add( 'Brak' );
-      Wyœwietlanie_Czasu_RadioGroup.Items.Add( 'Czas gry' );
-      Wyœwietlanie_Czasu_RadioGroup.Items.Add( 'Czas' );
+        zti := Wyœwietlanie_Czasu_RadioGroup.ItemIndex;
+        Wyœwietlanie_Czasu_RadioGroup.Items.Clear();
+        Wyœwietlanie_Czasu_RadioGroup.Items.Add( 'Brak' );
+        Wyœwietlanie_Czasu_RadioGroup.Items.Add( 'Czas gry' );
+        Wyœwietlanie_Czasu_RadioGroup.Items.Add( 'Czas' );
 
-      if    ( zti >= 0 )
-        and ( zti <= Wyœwietlanie_Czasu_RadioGroup.Items.Count ) then
-        Wyœwietlanie_Czasu_RadioGroup.ItemIndex := zti;
+        if    ( zti >= 0 )
+          and ( zti <= Wyœwietlanie_Czasu_RadioGroup.Items.Count ) then
+          Wyœwietlanie_Czasu_RadioGroup.ItemIndex := zti;
 
       Wyœwietlanie_Czasu_RadioGroup.Hint := '';
 
@@ -3223,10 +3177,10 @@ begin
 
       if wczytany_uk³ad_kostek_nazwa_pliku <> '' then
         //Uk³ad_Kostek_Nazwa_Label.Caption := 'Nazwa uk³adu kostek: ' + wczytany_uk³ad_kostek_nazwa_pliku + '.'
-        Uk³ad_Kostek_Nazwa_Label.Caption := t__uk³ad_kostek_nazwa + wczytany_uk³ad_kostek_nazwa_pliku + '.'
+        Uk³ad_Kostek_Nazwa_Label.Caption := t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa + ': ' + wczytany_uk³ad_kostek_nazwa_pliku + '.'
       else//if wczytany_uk³ad_kostek_nazwa_pliku <> '' then
         //Uk³ad_Kostek_Nazwa_Label.Caption := 'Nazwa uk³adu kostek: <brak>.';
-        Uk³ad_Kostek_Nazwa_Label.Caption := t__uk³ad_kostek_nazwa + t__uk³ad_kostek_nazwa__brak + '.';
+        Uk³ad_Kostek_Nazwa_Label.Caption := t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa + ': ' + t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa__brak + '.';
 
       Uk³ad_Kostek_Nazwa_Label.Hint := '';
 
@@ -3239,28 +3193,28 @@ begin
       zt_component := Mahjong_3D_Form.FindComponent( 'Uk³ady_Kostek__Odœwie¿_Listê_MenuItem' );
 
       if zt_component <> nil then
-        TMenuItem(zt_component).Caption := t__odœwie¿_listê_uk³adów_kostek;
+        TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_uk³adów_kostek;
 
 
       zt_component := nil;
       zt_component := Mahjong_3D_Form.FindComponent( 'Obrazki_Kostek__Odœwie¿_Listê_MenuItem' );
 
       if zt_component <> nil then
-        TMenuItem(zt_component).Caption := t__odœwie¿_listê_obrazków_kostek;
+        TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_obrazków_kostek;
 
 
       zt_component := nil;
       zt_component := Mahjong_3D_Form.FindComponent( 'Obrazki_Kostek__Brak_MenuItem' );
 
       if zt_component <> nil then
-        TMenuItem(zt_component).Caption := t__brak_obrazków_kostek;
+        TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__brak_obrazków_kostek;
 
 
       zt_component := nil;
       zt_component := Mahjong_3D_Form.FindComponent( 'Obrazki_Kostek__Domyœlne_MenuItem' );
 
       if zt_component <> nil then
-        TMenuItem(zt_component).Caption := t__domyœlne_obrazki_kostek;
+        TMenuItem(zt_component).Caption := t³umaczenie_komunikaty_r.menu_pozycja__domyœlne_obrazki_kostek;
 
     end;
   //---//if    ( Sender <> nil ) (...)
@@ -3295,7 +3249,7 @@ begin
   menu_item := TMenuItem.Create( Mahjong_3D_Form ); // Dla FindComponent().
   menu_item.Name := 'Obrazki_Kostek__Brak_MenuItem';
   //menu_item.Caption := 'Brak';
-  menu_item.Caption := t__brak_obrazków_kostek;
+  menu_item.Caption := t³umaczenie_komunikaty_r.menu_pozycja__brak_obrazków_kostek;
   menu_item.Hint := 'Brak';
   menu_item.AutoCheck := true;
   menu_item.RadioItem := true;
@@ -3308,7 +3262,7 @@ begin
   menu_item := TMenuItem.Create( Mahjong_3D_Form ); // Dla FindComponent().
   menu_item.Name := 'Obrazki_Kostek__Domyœlne_MenuItem';
   //menu_item.Caption := 'Domyœlne';
-  menu_item.Caption := t__domyœlne_obrazki_kostek;
+  menu_item.Caption := t³umaczenie_komunikaty_r.menu_pozycja__domyœlne_obrazki_kostek;
   menu_item.Hint := 'Domyœlne';
   menu_item.AutoCheck := true;
   menu_item.RadioItem := true;
@@ -3365,7 +3319,7 @@ begin
   menu_item := TMenuItem.Create( Mahjong_3D_Form ); // Dla FindComponent().
   menu_item.Name := 'Obrazki_Kostek__Odœwie¿_Listê_MenuItem';
   //menu_item.Caption := 'Odœwie¿ listê obrazków kostek';
-  menu_item.Caption := t__odœwie¿_listê_obrazków_kostek;
+  menu_item.Caption := t³umaczenie_komunikaty_r.menu_pozycja__odœwie¿_listê_obrazków_kostek;
   menu_item.OnClick := Wczytaj_Listê_Obrazków_Kostek;
 
   Obrazki_Kostek_MenuItem.Add( menu_item );
@@ -3378,7 +3332,7 @@ begin
     and ( TComponent(Sender).Name <> Mahjong_3D_Form.Name )
     and ( Obrazki_Kostek_MenuItem.Count < 3 ) then
     //Application.MessageBox( 'Brak zdefiniowanych obrazków kostek.', 'B³¹d', MB_ICONEXCLAMATION + MB_OK );
-    Application.MessageBox(  PChar( t__brak_zdefiniowanych_obrazków_kostek ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+    Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_obrazków_kostek ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
 
 end;//---//Funkcja Wczytaj_Listê_Obrazków_Kostek().
 
@@ -3419,7 +3373,7 @@ begin
 
           FindClose( search_rec );
           //Application.MessageBox(  PChar( 'Nie odnaleziono katalogu obrazków kostek: ' + zts + '.' ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK  );
-          Application.MessageBox(  PChar( t__nie_odnaleziono_katalogu_obrazków_kostek + zts + '.' ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+          Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_katalogu_obrazków_kostek + ': ' + zts + '.' ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
           Exit;
 
         end;
@@ -3491,7 +3445,7 @@ begin
 
   if komunikaty <> '' then
     //Application.MessageBox(  PChar(  komunikaty + '.' ), 'B³¹d', MB_OK + MB_ICONEXCLAMATION  );
-    Application.MessageBox(   PChar(  komunikaty + '.' ), PChar( t__b³¹d ), MB_OK + MB_ICONEXCLAMATION   );
+    Application.MessageBox(   PChar(  komunikaty + '.' ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_OK + MB_ICONEXCLAMATION   );
 
 end;//---//Funkcja Wczytaj_Obrazki_Kostek().
 
@@ -3586,17 +3540,8 @@ end;//---//Funkcja Wczytaj_Ini_Obrazków_Kostek().
 //Funkcja Wczytaj_Pomoc().
 procedure TMahjong_3D_Form.Wczytaj_Pomoc( const nazwa_pliku : string );
 var
-  tekst_l : TStringList;
   search_rec : TSearchRec;
-  zt_component : TComponent;
-  i,
-  zti
-    : integer;
-  zts,
-  nazwa
-  //t³umaczenie
-    : string;
-  czy_podpowiedŸ : boolean;
+  zts : string;
 begin
 
   if nazwa_pliku = '*:?:*<>"\|/' then // Plik domyœlny.
@@ -3609,7 +3554,7 @@ begin
 
       FindClose( search_rec );
       //Application.MessageBox(  PChar( 'Nie odnaleziono pliku t³umaczenia: ' + zts + '.' ), 'B³¹d', MB_ICONEXCLAMATION + MB_OK  );
-      Application.MessageBox(  PChar( t__nie_odnaleziono_pliku_pomocy + zts + '.' ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+      Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_pomocy + ': ' + zts + '.' ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
 
       if zts = ExtractFilePath( Application.ExeName ) + 'Pomoc\Pomoc.txt' then // Plik domyœlny.
         Exit;
@@ -3628,7 +3573,7 @@ begin
     Pomoc_Memo.Lines.LoadFromFile( zts );
   except
     on E : Exception do
-      Application.MessageBox(   PChar(  t__nie_odnaleziono_pliku_pomocy + zts + ' [2].' + #13 + E.Message + ' ' + IntToStr( E.HelpContext )  ), PChar( t__b³¹d ), MB_OK + MB_ICONEXCLAMATION   );
+      Application.MessageBox(   PChar(  t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_pliku_pomocy + ': ' + zts + ' [2].' + #13 + E.Message + ' ' + IntToStr( E.HelpContext )  ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_OK + MB_ICONEXCLAMATION   );
   end;
   //---//try
 
@@ -3995,9 +3940,9 @@ end;//---//Funkcja Color_To_RGB().
 
 //FormShow().
 procedure TMahjong_3D_Form.FormShow( Sender: TObject );
-var
+//var
 //  ztk : TKostka;
-  zts : string;
+//  zts : string;
 begin
 
   //ztk := TKostka.Create( Application );
@@ -4051,11 +3996,11 @@ begin
 
   if Uk³ady_Kostek_MenuItem.Count < 2 then
     //Application.MessageBox( 'Brak zdefiniowanych uk³adów kostek.', 'B³¹d', MB_ICONEXCLAMATION + MB_OK );
-    Application.MessageBox(  PChar( t__brak_zdefiniowanych_uk³adów_kostek ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+    Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_uk³adów_kostek ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
 
   if Obrazki_Kostek_MenuItem.Count < 2 then
     //Application.MessageBox( 'Brak zdefiniowanych obrazków kostek.', 'B³¹d', MB_ICONEXCLAMATION + MB_OK );
-    Application.MessageBox(  PChar( t__brak_zdefiniowanych_obrazków_kostek ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+    Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_obrazków_kostek ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
 
 
 
@@ -5109,7 +5054,7 @@ begin
     or (
          ( zti > 1 )
          //and (  Application.MessageBox( 'Rozpocz¹æ grê od nowa?', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2 ) = IDYES  )
-         and (   Application.MessageBox(  PChar( t__rozpocz¹æ_grê_od_nowa ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES   )
+         and (   Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__rozpocz¹æ_grê_od_nowa ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES   )
        ) then
     begin
 
@@ -5123,7 +5068,7 @@ begin
           begin
 
             //Application.MessageBox( 'Brak zdefiniowanych uk³adów kostek.', 'B³¹d', MB_ICONEXCLAMATION + MB_OK );
-            Application.MessageBox(  PChar( t__brak_zdefiniowanych_uk³adów_kostek ), PChar( t__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
+            Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__brak_zdefiniowanych_uk³adów_kostek ), PChar( t³umaczenie_komunikaty_r.komunikat__b³¹d ), MB_ICONEXCLAMATION + MB_OK  );
             Exit;
 
           end;
@@ -5377,7 +5322,7 @@ begin//Gra__PodpowiedŸ_MenuItemClick().
   Screen.Cursor := crDefault;
 
   //Application.MessageBox( 'Nie odnaleziono kostek do œci¹gniêcia.', 'Komunikat', MB_ICONINFORMATION + MB_OK );
-  Application.MessageBox(  PChar( t__nie_odnaleziono_kostek_do_œci¹gniêcia ), PChar( t__komunikat ), MB_ICONINFORMATION + MB_OK  );
+  Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_œci¹gniêcia ), PChar( t³umaczenie_komunikaty_r.komunikat__komunikat ), MB_ICONINFORMATION + MB_OK  );
 
 end;//---//Gra__PodpowiedŸ_MenuItemClick().
 
@@ -5447,7 +5392,7 @@ begin
     and ( Wyœwietlanie_Iloœci_Par_Do_Zdjêcia_CheckBox.Checked )
     and ( not Gra__Demo_MenuItem.Checked ) then
     //if Application.MessageBox( 'Nie odnaleziono kostek do œci¹gniêcia.' + #13 + 'Czy przetasowaæ?', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO ) = IDYES then
-    if Application.MessageBox(  PChar( t__nie_odnaleziono_kostek_do_œci¹gniêcia_czy_przetasowaæ ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO  ) = IDYES then
+    if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__nie_odnaleziono_kostek_do_œci¹gniêcia__czy_przetasowaæ ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO  ) = IDYES then
        Gra__Przetasuj_MenuItemClick( nil );
 
 end;//---//Gra__Przetasuj_MenuItemClick().
@@ -5468,7 +5413,7 @@ begin
 
 
   //if Application.MessageBox( 'Wyczyœciæ planszê?', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2 ) = IDYES then
-  if Application.MessageBox(  PChar( t__wyczyœciæ_planszê ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
+  if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__wyczyœciæ_planszê ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
     Wczytaj_Uk³ad_Kostek( '', true );
 
 
@@ -5487,7 +5432,7 @@ begin
 
 
   //if Application.MessageBox( 'Zakoñczyæ dzia³anie programu?', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2 ) = IDYES then
-  if Application.MessageBox(  PChar( t__zakoñczyæ_dzia³anie_programu ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
+  if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__zakoñczyæ_dzia³anie_programu ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
     Close();
 
 end;//---//Gra__WyjdŸ_MenuItemClick().
@@ -5501,7 +5446,7 @@ begin
 
 
   //if Application.MessageBox( 'Zaprezentowaæ kostki?' + #13 + 'Zakoñczy to trwaj¹c¹ grê.', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2 ) = IDYES then
-  if Application.MessageBox(  PChar( t__zaprezentowaæ_kostki ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
+  if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__zaprezentowaæ_kostki ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
     begin
 
       gra_czas_start := 0;
@@ -5513,7 +5458,7 @@ begin
       Wczytaj_Uk³ad_Kostek( '*:?:*<>"\|/' ); // Zaprezentuj kostki.
 
     end;
-  //---//if Application.MessageBox(  PChar( t__zaprezentowaæ_kostki ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
+  //---//if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__zaprezentowaæ_kostki ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) = IDYES then
 
 end;//---//Gra__Zaprezentuj_Kostki_MenuItemClick().
 
@@ -5695,8 +5640,8 @@ end;//---//Szybkoœæ_Zegara_SpinEditChange().
 
 //Wartoœci_Domyœlne_ButtonClick().
 procedure TMahjong_3D_Form.Wartoœci_Domyœlne_ButtonClick( Sender: TObject );
-var
-  zts : string;
+//var
+//  zts : string;
 begin
 
   blokuj_rysowanie_kostek := true;
@@ -5780,7 +5725,7 @@ begin
 
   wczytany_uk³ad_kostek_nazwa_pliku := '';
   //Uk³ad_Kostek_Nazwa_Label.Caption := 'Nazwa uk³adu kostek: <brak>.';
-  Uk³ad_Kostek_Nazwa_Label.Caption := t__uk³ad_kostek_nazwa + t__uk³ad_kostek_nazwa__brak + '.';
+  Uk³ad_Kostek_Nazwa_Label.Caption := t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa + ': ' + t³umaczenie_komunikaty_r.inne__uk³ad_kostek_nazwa__brak + '.';
 
 end;//---//Uk³ad_Kostek_Nazwa_Wyczyœæ_ButtonClick().
 
@@ -5888,7 +5833,7 @@ procedure TMahjong_3D_Form.Obrazek_T³a_Planszy__Wybierz_ButtonClick( Sender: TOb
 begin
 
   //OpenDialog1.Filter := 'Obrazki|*.bmp; *.gif; *.jpg; *.jpeg; *.png; *.tif; *.tiff|Wszystkie pliki|*.*';
-  OpenDialog1.Filter := t__obrazek_t³a_planszy_filtr;
+  OpenDialog1.Filter := t³umaczenie_komunikaty_r.inne__obrazek_t³a_planszy__filtr;
 
   //OpenDialog1.InitialDir := '';
 
@@ -5920,7 +5865,7 @@ procedure TMahjong_3D_Form.Obrazek_T³a_Planszy__Brak_ButtonClick( Sender: TObjec
 begin
 
   //if Application.MessageBox( 'Ustawiæ pusty obrazek t³a planszy?', 'Potwierdzenie', MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2 ) = IDYES then
-  if Application.MessageBox(  PChar( t__ustawiæ_pusty_obrazek_t³a_planszy ), PChar( t__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) <> IDYES then
+  if Application.MessageBox(  PChar( t³umaczenie_komunikaty_r.komunikat__ustawiæ_pusty_obrazek_t³a_planszy ), PChar( t³umaczenie_komunikaty_r.komunikat__potwierdzenie ), MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2  ) <> IDYES then
     Exit;
 
 
@@ -5991,13 +5936,13 @@ begin
   //---//case Wyœwietlanie_Czasu_RadioGroup.ItemIndex of
 
 
-  StatusBar1.Panels[ 3 ].Text := t__przetasowania_iloœæ + Trim(  FormatFloat( '### ### ##0', przetasowania_iloœæ )  );
-  StatusBar1.Panels[ 4 ].Text := t__podpowiedzi_iloœæ + Trim(  FormatFloat( '### ### ##0', podpowiedzi_iloœæ )  );
+  StatusBar1.Panels[ 3 ].Text := t³umaczenie_komunikaty_r.panel_napis__przetasowania_iloœæ + ' ' + Trim(  FormatFloat( '### ### ##0', przetasowania_iloœæ )  );
+  StatusBar1.Panels[ 4 ].Text := t³umaczenie_komunikaty_r.panel_napis__podpowiedzi_iloœæ + ' ' + Trim(  FormatFloat( '### ### ##0', podpowiedzi_iloœæ )  );
 
-  StatusBar1.Panels[ 5 ].Text := t__cofniêcia_iloœæ + Trim(  FormatFloat( '### ### ##0', cofniêcia_iloœæ )  );
+  StatusBar1.Panels[ 5 ].Text := t³umaczenie_komunikaty_r.panel_napis__cofniêcia_iloœæ + ' ' + Trim(  FormatFloat( '### ### ##0', cofniêcia_iloœæ )  );
 
   if Wyœwietlanie_Iloœci_Par_Do_Zdjêcia_CheckBox.Checked then
-    StatusBar1.Panels[ 6 ].Text := Trim(  t__par_do_zdjêcia + FormatFloat( '### ### ##0', par_do_zdjêcia_iloœæ )  )
+    StatusBar1.Panels[ 6 ].Text := Trim(  t³umaczenie_komunikaty_r.panel_napis__par_do_zdjêcia + ' ' + FormatFloat( '### ### ##0', par_do_zdjêcia_iloœæ )  )
   else//if Wyœwietlanie_Iloœci_Par_Do_Zdjêcia_CheckBox.Checked then
     StatusBar1.Panels[ 6 ].Text := '';
 

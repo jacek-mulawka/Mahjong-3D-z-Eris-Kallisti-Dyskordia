@@ -51,7 +51,7 @@
       Top = 51
       Width = 248
       Height = 671
-      ActivePage = Opcje_TabSheet
+      ActivePage = O_Programie_TabSheet
       Align = alClient
       TabHeight = 45
       TabOrder = 0
@@ -59,6 +59,10 @@
         Caption = 'Opcje'
         ParentShowHint = False
         ShowHint = True
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object Opcje_ScrollBox: TScrollBox
           Left = 0
           Top = 0
@@ -500,6 +504,10 @@
       object Pomoc_TabSheet: TTabSheet
         Caption = 'Pomoc'
         ImageIndex = 1
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object Pomoc_Memo: TMemo
           Left = 0
           Top = 0
@@ -518,6 +526,10 @@
       object Tłumaczenia_TabSheet: TTabSheet
         Caption = 'T'#322'umaczenia'
         ImageIndex = 2
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object Tłumaczenia_Panel: TPanel
           Left = 0
           Top = 0
@@ -589,7 +601,7 @@
           Height = 260
           Align = alTop
           Caption = 
-            'Mahjong 3D z Eris Kallisti Dyskordia'#13#10'wersja 2021.05.03.'#13#10#13#10'MIT ' +
+            'Mahjong 3D z Eris Kallisti Dyskordia'#13#10'wersja 2023.03.13.'#13#10#13#10'MIT ' +
             'License'#13#10#13#10'Copyright (c) 2017 Jacek Mulawka'#13#10#13#10'j.mulawka@interia' +
             '.pl'#13#10#13#10'https://github.com/jacek-mulawka'#13#10#13#10#13#10#13#10'Program jest darm' +
             'owy, udost'#281'pniony w postaci takiej jakiej jest wraz ze wszystkim' +
