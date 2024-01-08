@@ -31,10 +31,11 @@
     <PropertyGroup Condition="'$(Base)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1045</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=Jacek Mulawka;FileDescription=Mahjong jednoosobowy 3D z Eris Kallisti Dyskordia. MIT License.;FileVersion=1.0.0.0;InternalName=;LegalCopyright=Copyright (c) 2017 Jacek Mulawka;LegalTrademarks=;OriginalFilename=Mahjong 3D z Eris Kallisti Dyskordia;ProductName=Mahjong 3D z Eris Kallisti Dyskordia;ProductVersion=2023.3.13;Comments=j.mulawka@interia.pl https://github.com/jacek-mulawka;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Jacek Mulawka;FileDescription=Mahjong jednoosobowy 3D z Eris Kallisti Dyskordia. MIT License.;FileVersion=2.0.0.0;InternalName=;LegalCopyright=Copyright (c) 2017 Jacek Mulawka;LegalTrademarks=;OriginalFilename=Mahjong 3D z Eris Kallisti Dyskordia;ProductName=Mahjong 3D z Eris Kallisti Dyskordia;ProductVersion=2024.1.6;Comments=j.mulawka@interia.pl https://github.com/jacek-mulawka;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <SanitizedProjectName>Mahjong_3D_pr</SanitizedProjectName>
         <DCC_ExeOutput>.</DCC_ExeOutput>
         <DCC_DcuOutput>.\10_2\$(Platform)\$(Config)</DCC_DcuOutput>
+        <VerInfo_MajorVer>2</VerInfo_MajorVer>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <Icon_MainIcon>Karaoke_pr.ico</Icon_MainIcon>

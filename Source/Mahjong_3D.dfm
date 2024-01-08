@@ -59,10 +59,6 @@
         Caption = 'Opcje'
         ParentShowHint = False
         ShowHint = True
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Opcje_ScrollBox: TScrollBox
           Left = 0
           Top = 0
@@ -504,10 +500,6 @@
       object Pomoc_TabSheet: TTabSheet
         Caption = 'Pomoc'
         ImageIndex = 1
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Pomoc_Memo: TMemo
           Left = 0
           Top = 0
@@ -526,10 +518,6 @@
       object Tłumaczenia_TabSheet: TTabSheet
         Caption = 'T'#322'umaczenia'
         ImageIndex = 2
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Tłumaczenia_Panel: TPanel
           Left = 0
           Top = 0
@@ -598,17 +586,17 @@
           Left = 0
           Top = 0
           Width = 240
-          Height = 260
+          Height = 273
           Align = alTop
           Caption = 
-            'Mahjong 3D z Eris Kallisti Dyskordia'#13#10'wersja 2023.03.13.'#13#10#13#10'MIT ' +
-            'License'#13#10#13#10'Copyright (c) 2017 Jacek Mulawka'#13#10#13#10'j.mulawka@interia' +
-            '.pl'#13#10#13#10'https://github.com/jacek-mulawka'#13#10#13#10#13#10#13#10'Program jest darm' +
-            'owy, udost'#281'pniony w postaci takiej jakiej jest wraz ze wszystkim' +
-            'i b'#322#281'dami. U'#380'ytkownik zyskuje dost'#281'p do programu, u'#380'ywa programu' +
-            ' na w'#322'asne ryzyko i ponosi wy'#322#261'czn'#261' odpowiedzialno'#347#263' za wszelkie' +
-            ' szkody (w'#322'asne i niew'#322'asne) materialne i niematerialne oraz utr' +
-            'at'#281' danych w zwi'#261'zku z u'#380'ywaniem programu.'
+            'Mahjong 3D z Eris Kallisti Dyskordia'#13#10'wydanie 2.0.0.0'#13#10'wersja 20' +
+            '24.01.06.'#13#10#13#10'MIT License'#13#10#13#10'Copyright (c) 2017 Jacek Mulawka'#13#10#13#10 +
+            'j.mulawka@interia.pl'#13#10#13#10'https://github.com/jacek-mulawka'#13#10#13#10#13#10#13#10 +
+            'Program jest darmowy, udost'#281'pniony w postaci takiej jakiej jest ' +
+            'wraz ze wszystkimi b'#322#281'dami. U'#380'ytkownik zyskuje dost'#281'p do program' +
+            'u, u'#380'ywa programu na w'#322'asne ryzyko i ponosi wy'#322#261'czn'#261' odpowiedzia' +
+            'lno'#347#263' za wszelkie szkody (w'#322'asne i niew'#322'asne) materialne i niema' +
+            'terialne oraz utrat'#281' danych w zwi'#261'zku z u'#380'ywaniem programu.'
           WordWrap = True
           ExplicitWidth = 237
         end
@@ -4975,6 +4963,7 @@
     Height = 100
     Camera = GLCamera1
     FieldOfView = 90.000000000000000000
+    PenAsTouch = False
     OnClick = GLSceneViewer1Click
     OnMouseDown = GLSceneViewer1MouseDown
     OnMouseMove = GLSceneViewer1MouseMove

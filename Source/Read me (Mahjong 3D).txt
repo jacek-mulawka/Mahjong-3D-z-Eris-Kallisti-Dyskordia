@@ -1,5 +1,6 @@
 Mahjong 3D z Eris Kallisti Dyskordia
-wersja 2023.03.13.
+wydanie 2.0.0.0
+wersja 2024.01.06.
 
 MIT License
 

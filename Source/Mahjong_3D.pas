@@ -11,17 +11,19 @@ unit Mahjong_3D;{28.02.2017}
   //
 
 
-// Do zrobienia: nic.
+  // Wydanie 2.0.0.0 - aktualizacja GLScene z 1.6.0.7082 na 2.2 2023.
 
 interface
 
 uses
+  GLS.Color,
+  GLS.SpaceText,
+  GLS.Texture,
+
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.StdCtrls,Vcl.Samples.Spin,
-  System.StrUtils, System.IniFiles, Vcl.Imaging.jpeg, Vcl.Imaging.pngimage, Vcl.Imaging.GIFImg, System.Math,
-  System.Rtti, System.TypInfo,
-  GLScene, GLObjects, GLCoordinates, GLWin32Viewer, GLCrossPlatform, GLBaseClasses,
-  GLSpaceText, GLColor, GLSkyBox, GLMaterial, GLTexture;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Samples.Spin,
+
+  GLS.Scene, GLS.Objects, GLS.Coordinates, GLS.SceneViewer, GLS.BaseClasses, GLS.SkyDome, GLS.Material;
 
 type
   TTabela_RGB = array[ 1..3 ] of integer;
@@ -109,7 +111,7 @@ type
     destructor Destroy(); override;
   end;
 
-  TGLSpaceText_M = class( TGLSpaceText )  // uses GLSpaceText.
+  TGLSpaceText_M = class( GLS.SpaceText.TGLSpaceText )
   private
     { Private declarations }
     Kostka : TKostka;
@@ -355,6 +357,16 @@ var
   Mahjong_3D_Form: TMahjong_3D_Form;
 
 implementation
+
+uses
+  System.IniFiles,
+  System.Math,
+  System.Rtti,
+  System.StrUtils,
+  System.TypInfo,
+  Vcl.Imaging.GIFImg,
+  Vcl.Imaging.jpeg,
+  Vcl.Imaging.pngimage;
 
 {$R *.dfm}
 
@@ -784,7 +796,7 @@ begin
       Self.Obrazek.Material.Texture.ImageGamma := 2;
 
       Self.Opis_Kostki.Font.Style := Self.Opis_Kostki.Font.Style + [ fsBold ];
-      Self.Opis_Kostki.Material.FrontProperties.Diffuse.Color := GLColor.clrGreen;
+      Self.Opis_Kostki.Material.FrontProperties.Diffuse.Color := GLS.Color.clrGreen;
 
     end
   else//if zaznaczona then
@@ -797,7 +809,7 @@ begin
       Self.Obrazek.Material.Texture.ImageGamma := 1;
 
       Self.Opis_Kostki.Font.Style := Self.Opis_Kostki.Font.Style - [ fsBold ];
-      Self.Opis_Kostki.Material.FrontProperties.Diffuse.Color := GLColor.clrGray80;
+      Self.Opis_Kostki.Material.FrontProperties.Diffuse.Color := GLS.Color.clrGray80;
 
     end;
   //---//if zaznaczona then
@@ -836,7 +848,7 @@ begin
 
   Self.Text := '';
   Self.TextHeight := 1;
-  Self.Material.FrontProperties.Ambient.Color := GLColor.clrWhite;
+  Self.Material.FrontProperties.Ambient.Color := GLS.Color.clrWhite;
   //Self.TurnAngle := 0;
   //Self.Visible := true;
 
@@ -3605,7 +3617,7 @@ begin
 
   zt_gl_libMaterial := GLMaterialLibrary1.AddTextureMaterial( nazwa_tekstury, adres_pliku );
   zt_gl_libMaterial.Material.Texture.Disabled := false;
-  zt_gl_libMaterial.Material.Texture.TextureMode := GLTexture.tmDecal;
+  zt_gl_libMaterial.Material.Texture.TextureMode := GLS.Texture.tmDecal;
 
   //zt_gl_libMaterial.TextureScale.X := 10;
   //Reszt_gl_libMaterialult.TextureScale.Y := 10;
