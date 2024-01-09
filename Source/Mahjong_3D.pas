@@ -958,7 +958,7 @@ var
     procedure Wczytaj_Ini_Uk³adu_Kostek( const czytaj_parametry_kostek : boolean );
     var
       search_rec : TSearchRec;
-      plik_ini : TIniFile;
+      plik_ini : System.IniFiles.TIniFile;
       zti : integer;
       zts : string;
     begin
@@ -986,7 +986,7 @@ var
       if FindFirst( zts, faAnyFile, search_rec ) = 0 then // Sprawdza czy istnieje plik.
         begin
 
-          plik_ini := TIniFile.Create( zts );
+          plik_ini := System.IniFiles.TIniFile.Create( zts );
 
 
           if czytaj_parametry_kostek then
@@ -2091,7 +2091,7 @@ procedure TMahjong_3D_Form.Wczytaj_Ustawienia();
   end;//---//Funkcja Invert_Color() w Wczytaj_Ustawienia().
 
 var
-  plik_ini : TIniFile;
+  plik_ini : System.IniFiles.TIniFile;
   tekst_l : TStringList;
   search_rec : TSearchRec;
   zti_1,
@@ -2106,7 +2106,7 @@ begin//Funkcja Wczytaj_Ustawienia().
   // Tutaj jeszcze nie ma wczytanych t³umaczeñ (w ustawieniach jest okreœlone wybrane t³umaczenie).
 
   {$region 'Plik ini.'}
-  plik_ini := TIniFile.Create(  ExtractFilePath( Application.ExeName ) + 'Mahjong.ini'  );
+  plik_ini := System.IniFiles.TIniFile.Create(  ExtractFilePath( Application.ExeName ) + 'Mahjong.ini'  );
 
   blokuj_rysowanie_kostek := true;
 
@@ -2538,7 +2538,7 @@ end;//---//Funkcja Wczytaj_Ustawienia().
 //Funkcja Zapisz_Ustawienia().
 procedure TMahjong_3D_Form.Zapisz_Ustawienia( Sender : TObject );
 var
-  plik_ini : TIniFile;
+  plik_ini : System.IniFiles.TIniFile;
   tekst_l : TStringList;
 begin
 
@@ -2547,7 +2547,7 @@ begin
     Exit;
 
 
-  plik_ini := TIniFile.Create(  ExtractFilePath( Application.ExeName ) + 'Mahjong.ini'  );
+  plik_ini := System.IniFiles.TIniFile.Create(  ExtractFilePath( Application.ExeName ) + 'Mahjong.ini'  );
 
 
   plik_ini.WriteInteger( 'Opcje', 'Wyœwietlanie_Czasu', Wyœwietlanie_Czasu_RadioGroup.ItemIndex );
@@ -3465,7 +3465,7 @@ end;//---//Funkcja Wczytaj_Obrazki_Kostek().
 procedure TMahjong_3D_Form.Wczytaj_Ini_Obrazków_Kostek( const adres_pliku : string );
 var
   search_rec : TSearchRec;
-  plik_ini : TIniFile;
+  plik_ini : System.IniFiles.TIniFile;
   zti : integer;
 begin
 
@@ -3492,7 +3492,7 @@ begin
     begin
 
       {$region 'Plik ini.'}
-      plik_ini := TIniFile.Create( adres_pliku );
+      plik_ini := System.IniFiles.TIniFile.Create( adres_pliku );
 
       blokuj_rysowanie_kostek := true;
 
