@@ -887,8 +887,8 @@ begin
 
   zti := 0;
 
-  //Je¿eli znajdzie plik zwraca 0, je¿eli nie znajdzie zwraca numer b³êdu. Na pocz¹tku znajduje '.' '..' potem listê plików.
-  if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Uk³ady kostek\*.txt', faAnyFile, search_rec  ) = 0 then //Application potrzebuje w uses Forms.
+  // Je¿eli znajdzie plik zwraca 0, je¿eli nie znajdzie zwraca numer b³êdu. Na pocz¹tku znajduje '.' '..' potem listê plików.
+  if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Uk³ady kostek\*.txt', faAnyFile, search_rec  ) = 0 then // Application potrzebuje w uses Forms.
     begin
 
       repeat
@@ -911,7 +911,7 @@ begin
       until FindNext( search_rec ) <> 0 //Zwraca dane kolejnego pliku zgodnego z parametrami wczeœniej wywo³anej funkcji FindFirst. Je¿eli mo¿na przejœæ do nastêpnego znalezionego pliku zwraca 0.
 
     end;
-  //---//if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Uk³ady kostek\*.txt', faAnyFile, search_rec  ) = 0 then //Application
+  //---//if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Uk³ady kostek\*.txt', faAnyFile, search_rec  ) = 0 then
 
   FindClose( search_rec );
 
@@ -2618,8 +2618,8 @@ begin
 
   T³umaczenia_ListBox.Items.Clear();
 
-  //Je¿eli znajdzie plik zwraca 0, je¿eli nie znajdzie zwraca numer b³êdu. Na pocz¹tku znajduje '.' '..' potem listê plików.
-  if FindFirst(  ExtractFilePath( Application.ExeName ) + 'T³umaczenia\*.txt', faAnyFile, search_rec  ) = 0 then //Application potrzebuje w uses Forms.
+  // Je¿eli znajdzie plik zwraca 0, je¿eli nie znajdzie zwraca numer b³êdu. Na pocz¹tku znajduje '.' '..' potem listê plików.
+  if FindFirst(  ExtractFilePath( Application.ExeName ) + 'T³umaczenia\*.txt', faAnyFile, search_rec  ) = 0 then // Application potrzebuje w uses Forms.
     begin
 
       repeat
@@ -2634,7 +2634,7 @@ begin
       until FindNext( search_rec ) <> 0 //Zwraca dane kolejnego pliku zgodnego z parametrami wczeœniej wywo³anej funkcji FindFirst. Je¿eli mo¿na przejœæ do nastêpnego znalezionego pliku zwraca 0.
 
     end;
-  //---//if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Uk³ady kostek\*.txt', faAnyFile, search_rec  ) = 0 then //Application
+  //---//if FindFirst(  ExtractFilePath( Application.ExeName ) + 'T³umaczenia\*.txt', faAnyFile, search_rec  ) = 0 then
 
   FindClose( search_rec );
 
@@ -3286,7 +3286,7 @@ begin
   zti := 0;
 
   // Je¿eli znajdzie plik zwraca 0, je¿eli nie znajdzie zwraca numer b³êdu. Na pocz¹tku znajduje '.' '..' potem listê plików.
-  if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Obrazki kostek\*', faDirectory, search_rec  ) = 0 then //Application potrzebuje w uses Forms.
+  if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Obrazki kostek\*', faDirectory, search_rec  ) = 0 then // Application potrzebuje w uses Forms.
     begin
 
       repeat
@@ -3323,7 +3323,7 @@ begin
       until FindNext( search_rec ) <> 0 //Zwraca dane kolejnego pliku zgodnego z parametrami wczeœniej wywo³anej funkcji FindFirst. Je¿eli mo¿na przejœæ do nastêpnego znalezionego pliku zwraca 0.
 
     end;
-  //---//if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Obrazki kostek\', faDirectory, search_rec  ) = 0 then //Application
+  //---//if FindFirst(  ExtractFilePath( Application.ExeName ) + 'Obrazki kostek\', faDirectory, search_rec  ) = 0 then
 
   FindClose( search_rec );
 
